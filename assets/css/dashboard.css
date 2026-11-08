@@ -1,0 +1,292 @@
+/* ==========================================================================
+   FINBRIDGE — DASHBOARD STYLESHEET (Customer & Admin)
+   ========================================================================== */
+
+.fb-dash-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F8FAFC;
+}
+
+/* Sidebar */
+.fb-dash-sidebar {
+  width: 260px;
+  background-color: #0B1D33;
+  color: #94A3B8;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fb-dash-brand {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fb-dash-menu {
+  list-style: none;
+  padding: 18px 12px;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.fb-dash-menu-header {
+  font-size: 0.685rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748B;
+  padding: 10px 14px 4px;
+}
+
+.fb-dash-menu-item {
+  margin-bottom: 4px;
+}
+
+.fb-dash-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: var(--fb-transition);
+}
+
+.fb-dash-menu-link i {
+  font-size: 1.15rem;
+  width: 20px;
+  text-align: center;
+}
+
+.fb-dash-menu-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.fb-dash-menu-link.active {
+  background-color: var(--fb-green);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 168, 120, 0.3);
+}
+
+.fb-dash-user-card {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fb-dash-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--fb-green);
+  color: #FFFFFF;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Dashboard Area */
+.fb-dash-main {
+  margin-left: 260px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Topbar */
+.fb-dash-topbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--fb-border);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.fb-dash-content {
+  padding: 28px;
+}
+
+/* Metric Cards */
+.fb-dash-metric {
+  background: #FFFFFF;
+  border: 1px solid var(--fb-border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--fb-transition);
+}
+
+.fb-dash-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fb-shadow-sm);
+}
+
+.fb-dash-metric-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.fb-dash-metric-title {
+  font-size: 0.8rem;
+  color: var(--fb-text-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.fb-dash-metric-val {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--fb-text);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.fb-dash-metric-trend {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trend-up { color: var(--fb-green); }
+.trend-down { color: var(--fb-danger); }
+
+/* Application Stepper in Dashboard */
+.fb-timeline-step {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.fb-timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+.fb-timeline-step::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 36px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--fb-border);
+}
+
+.fb-timeline-step:last-child::before {
+  display: none;
+}
+
+.fb-timeline-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.fb-timeline-step.completed .fb-timeline-icon {
+  background-color: var(--fb-green);
+  color: #FFFFFF;
+}
+
+.fb-timeline-step.current .fb-timeline-icon {
+  background-color: var(--fb-primary);
+  color: #FFFFFF;
+  box-shadow: 0 0 0 4px var(--fb-green-light);
+}
+
+/* Status Badges */
+.badge-status {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-approved { background-color: #DCFCE7; color: #166534; }
+.badge-pending { background-color: #FEF3C7; color: #92400E; }
+.badge-review { background-color: #DBEAFE; color: #1E40AF; }
+.badge-rejected { background-color: #FEE2E2; color: #991B1B; }
+
+/* Table in dashboard */
+.fb-table-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fb-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.fb-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.fb-table th {
+  background-color: #F8FAFC;
+  color: #475569;
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--fb-border);
+}
+
+.fb-table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--fb-border);
+  font-size: 0.875rem;
+}
+
+.fb-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fb-table tr:hover td {
+  background-color: #F8FAFC;
+}
+

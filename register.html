@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Free Account — FinBridge</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        
+        <!-- Brand Logo -->
+        <div class="text-center mb-4">
+          <a class="fb-brand justify-content-center text-decoration-none" href="index.html">
+            <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
+            <span>Fin<span class="highlight">Bridge</span></span>
+          </a>
+          <p class="text-muted small mt-2">Your Money. Your Control. Your Future.</p>
+        </div>
+
+        <div class="card border shadow-sm p-4" style="border-radius:18px;">
+          <h4 class="fw-bold text-navy mb-1">Create Your FinBridge Account</h4>
+          <p class="text-muted small mb-4">Access pre-approved loan offers, credit monitoring and document vault</p>
+
+          <form onsubmit="handleRegistration(event)">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="fb-form-label">Full Name as per PAN</label>
+                <input type="text" class="fb-form-control" id="regName" placeholder="e.g. Pooja Verma" required>
+              </div>
+              <div class="col-md-6">
+                <label class="fb-form-label">Mobile Number</label>
+                <input type="tel" class="fb-form-control" id="regPhone" placeholder="+91 98111 22334" required>
+              </div>
+              <div class="col-md-6">
+                <label class="fb-form-label">Email Address</label>
+                <input type="email" class="fb-form-control" id="regEmail" placeholder="pooja.verma@example.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="fb-form-label">City</label>
+                <input type="text" class="fb-form-control" id="regCity" placeholder="Mumbai" required>
+              </div>
+              <div class="col-md-6">
+                <label class="fb-form-label">Monthly In-Hand Income (₹)</label>
+                <input type="number" class="fb-form-control" id="regIncome" placeholder="85000" required>
+              </div>
+              <div class="col-md-6">
+                <label class="fb-form-label">Employment Status</label>
+                <select class="fb-form-select" id="regEmp">
+                  <option selected>Salaried Professional</option>
+                  <option>Self-Employed / Freelancer</option>
+                  <option>Business Owner</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="regConsent" checked required>
+              <label class="form-check-label text-muted small" for="regConsent">
+                I agree to FinBridge <a href="about.html#terms">Terms of Use</a> & <a href="about.html#privacy">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="fb-btn-primary w-100 py-2 mb-3">
+              Create Account & Check Pre-Approved Limits <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+
+          <div class="text-center small text-muted">
+            Already have an account? <a href="login.html" class="fw-bold text-success">Log In</a>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 text-muted small">
+          <a href="index.html" class="text-muted"><i class="bi bi-arrow-left me-1"></i> Back to FinBridge Home</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleRegistration(e) {
+      e.preventDefault();
+      const newUser = {
+        name: document.getElementById('regName').value,
+        phone: document.getElementById('regPhone').value,
+        email: document.getElementById('regEmail').value,
+        city: document.getElementById('regCity').value,
+        income: parseInt(document.getElementById('regIncome').value, 10),
+        cibil: 765
+      };
+
+      localStorage.setItem('finbridge_user', JSON.stringify(newUser));
+      showToast('Registration successful! Setting up your financial dashboard...', 'success');
+      setTimeout(() => {
+        window.location.href = 'dashboard/index.html';
+      }, 700);
+    }
+  </script>
+</body>
+</html>
+

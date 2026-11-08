@@ -1,0 +1,882 @@
+# MASTER PROJECT PROMPT – FINBRIDGE
+## Premium Financial Marketplace & Personal Finance Dashboard
+
+Act as a Senior FinTech Product Designer, UI/UX Engineer, Frontend Architect and JavaScript Developer.
+
+Build a complete, premium, modern and fully interactive Indian financial marketplace website inspired by the functionality of Paisabazaar, but with original branding, original layouts and a unique FinBridge design identity.
+
+IMPORTANT:
+This is a frontend-only interactive demo. Use ONLY:
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Bootstrap 5
+- Bootstrap Icons
+- Chart.js
+- Google Fonts
+
+Do not use React, Next.js, Angular, Vue, Django, Flask, Node.js or any backend.
+
+All pages must be connected and functional using JavaScript, localStorage and sample demo data.
+
+---
+
+# 1. BRAND IDENTITY
+
+Brand Name: FINBRIDGE
+
+Tagline: Your Money. Your Control. Your Future.
+
+Industry: Financial Marketplace / Personal Finance / FinTech.
+
+Design direction:
+- Premium
+- Modern
+- Trustworthy
+- Minimal
+- Professional
+- Elegant
+- Enterprise-grade fintech experience
+
+Color palette:
+- Primary Navy: #142B4A
+- Secondary Navy: #1D3D63
+- Accent Green: #16A36A
+- Background: #F5F7FA
+- White: #FFFFFF
+- Text: #1E293B
+- Muted: #718096
+- Border: #E5EAF0
+- Warning: #F59E0B
+- Danger: #DC3545
+
+Typography:
+- Inter
+- Manrope
+
+Use generous whitespace, premium cards, subtle shadows, smooth transitions, rounded corners and clean typography.
+
+Create a custom FINBRIDGE text logo with a modern financial bridge icon.
+
+---
+
+# 2. PROJECT STRUCTURE
+
+Create a clean multi-page project.
+
+finbridge/
+│
+├── index.html
+├── loans.html
+├── personal-loan.html
+├── credit-cards.html
+├── credit-score.html
+├── bank-statement.html
+├── insurance.html
+├── investments.html
+├── calculators.html
+├── blog.html
+├── contact.html
+├── login.html
+├── register.html
+│
+├── dashboard/
+│   ├── index.html
+│   ├── profile.html
+│   ├── applications.html
+│   ├── saved-products.html
+│   ├── documents.html
+│   ├── notifications.html
+│   └── statement-analysis.html
+│
+├── admin/
+│   ├── index.html
+│   ├── users.html
+│   ├── leads.html
+│   ├── banks.html
+│   ├── loans.html
+│   ├── credit-cards.html
+│   ├── applications.html
+│   ├── statements.html
+│   ├── blog.html
+│   ├── analytics.html
+│   └── settings.html
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── dashboard.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── calculators.js
+│   │   ├── statement-analyzer.js
+│   │   ├── dashboard.js
+│   │   └── admin.js
+│   │
+│   └── images/
+│
+└── README.md
+
+Use reusable components through JavaScript where appropriate.
+
+---
+
+# 3. PUBLIC WEBSITE – HOMEPAGE
+
+Create a premium financial marketplace homepage.
+
+NAVBAR:
+- FINBRIDGE logo
+- Home
+- Loans
+- Credit Cards
+- Credit Score
+- Bank Statement Analyzer
+- Insurance
+- Investments
+- Calculators
+- Login
+- Get Started CTA
+
+HERO SECTION:
+
+Headline:
+"Make Smarter Financial Decisions."
+
+Subtitle:
+"Compare financial products, understand your spending and take control of your money with FinBridge."
+
+Hero CTAs:
+- Explore Loans
+- Analyze Bank Statement
+
+Add a premium financial illustration with floating financial dashboard cards.
+
+HERO QUICK ACTIONS:
+1. Check Credit Score
+2. Compare Loans
+3. Compare Credit Cards
+4. Analyze Bank Statement
+5. Calculate EMI
+
+TRUST SECTION:
+- Smart Financial Tools
+- Transparent Comparisons
+- Secure Document Handling
+- Easy Application Tracking
+
+LOAN CATEGORY SECTION:
+- Personal Loan
+- Home Loan
+- Business Loan
+- Car Loan
+- Education Loan
+- Gold Loan
+- Two Wheeler Loan
+
+CREDIT CARD SECTION:
+Create premium card comparison cards with:
+- Bank name
+- Card image
+- Joining fee
+- Annual fee
+- Cashback
+- Reward points
+- Lounge access
+- Compare button
+- View Details button
+
+CREDIT SCORE SECTION:
+Create a credit score introduction card with a circular score gauge.
+
+FINANCIAL TOOLS:
+- EMI Calculator
+- SIP Calculator
+- FD Calculator
+- GST Calculator
+- Loan Eligibility Calculator
+- Personal Expense Calculator
+
+BANK STATEMENT ANALYZER SECTION:
+Create a prominent promotional section.
+
+Heading:
+"Understand Your Money Better."
+
+Description:
+"Upload your bank statement and discover where your money goes."
+
+CTA:
+Analyze My Statement
+
+BLOG SECTION:
+- Credit Score Tips
+- Personal Loan Guide
+- Saving Money
+- Financial Planning
+- Banking Education
+
+FAQ AND FOOTER.
+
+---
+
+# 4. SPECIAL FEATURE – BANK STATEMENT ANALYZER
+
+This is one of the most important features of FinBridge.
+
+Create a fully interactive Bank Statement Analyzer.
+
+PAGE:
+bank-statement.html
+
+HERO:
+"Your Entire Financial Life, Explained."
+
+Description:
+"Upload your bank statement and get a clear picture of your income, expenses, savings and financial habits."
+
+SUPPORTED FORMATS:
+- PDF
+- CSV
+- XLSX (optional if supported through a browser library)
+
+Add drag-and-drop upload interface.
+
+Show:
+- Select File
+- Upload File
+- Analyze Statement
+- Remove File
+
+SECURITY NOTICE:
+"Your financial statement contains sensitive information. This demo processes files locally in your browser. Do not upload real bank statements to an untrusted demo."
+
+For PDF processing, use PDF.js.
+For CSV processing, use PapaParse.
+For XLSX, optionally use SheetJS.
+
+Never send uploaded statements to an external server.
+
+## BANK STATEMENT ANALYSIS DASHBOARD
+
+After processing, show the following sections.
+
+### A. Financial Overview
+
+Create four KPI cards:
+
+1. Total Money In
+2. Total Money Out
+3. Net Savings
+4. Total Transactions
+
+Use real values extracted from the parsed transactions.
+
+### B. Income Analysis
+
+Identify incoming transactions.
+
+Categories:
+- Salary
+- Business Income
+- Interest
+- Refund
+- Other Credits
+
+Display:
+- Total monthly income
+- Average monthly income
+- Income trend
+- Income sources
+- Monthly income chart
+
+### C. Expense Analysis
+
+Automatically categorize transactions into:
+
+- Food & Dining
+- Shopping
+- Groceries
+- Rent
+- Electricity
+- Transport
+- Fuel
+- Entertainment
+- Healthcare
+- Education
+- Loan EMI
+- Insurance
+- Investments
+- Subscriptions
+- ATM Withdrawals
+- Bank Charges
+- Transfers
+- Other Expenses
+
+Display:
+- Total expenses
+- Category-wise expenses
+- Highest spending category
+- Monthly expenses
+- Expense trends
+
+Use a Doughnut Chart for category-wise spending.
+
+### D. Transaction Analysis
+
+Create a searchable transaction table.
+
+Columns:
+- Date
+- Description
+- Transaction Type
+- Category
+- Debit
+- Credit
+- Balance
+
+Features:
+- Search transaction
+- Filter by category
+- Filter by debit/credit
+- Sort by date
+- Sort by amount
+- Pagination
+- Export filtered transactions as CSV
+
+### E. Monthly Cash Flow
+
+Display:
+- Monthly income
+- Monthly expenses
+- Monthly savings
+- Cash flow chart
+
+Use Chart.js line/bar charts.
+
+### F. EMI & Loan Analysis
+
+Detect possible EMI transactions using descriptions such as:
+- EMI
+- LOAN
+- HDFC LOAN
+- SBI LOAN
+- BAJAJ FINANCE
+- HOME LOAN
+- PERSONAL LOAN
+
+Display:
+- Estimated monthly EMI
+- Number of recurring EMI payments
+- Possible loan-related transactions
+- Monthly EMI burden
+
+Clearly mark these as detected patterns, not verified loans.
+
+### G. Subscription Detection
+
+Detect recurring payments.
+
+Examples:
+- Netflix
+- Spotify
+- Amazon Prime
+- YouTube Premium
+- Google Services
+- Other recurring UPI payments
+
+Show:
+- Subscription name
+- Estimated monthly cost
+- Frequency
+- Last payment date
+
+Mark results as possible recurring payments.
+
+### H. Spending Insights
+
+Generate useful observations:
+
+Examples:
+- Your highest spending category is Shopping.
+- Your monthly food expenses increased by 18%.
+- Your average monthly savings are ₹8,500.
+- You have 4 possible recurring subscriptions.
+- Your EMI payments account for 22% of detected monthly credits.
+
+All observations must be calculated from actual parsed demo transactions.
+
+### I. Financial Health Summary
+
+Create a visual financial health dashboard.
+
+Show:
+- Savings rate
+- Expense-to-income ratio
+- EMI-to-income ratio
+- Monthly cash flow
+- Emergency fund estimate
+
+Do not present a fake official credit score or claim that this is a bank-approved financial health score.
+
+### J. Download Report
+
+Create downloadable PDF and CSV reports.
+
+PDF report should contain:
+- Financial overview
+- Income breakdown
+- Expense breakdown
+- Monthly cash flow
+- Transaction summary
+- Detected subscriptions
+- Possible EMI payments
+- Financial insights
+
+Use jsPDF or a browser-compatible PDF generation library.
+
+## DEMO MODE
+
+Add a button:
+
+"Try With Sample Bank Statement"
+
+Clicking this button should load a realistic fictional Indian bank statement containing:
+- Salary credits
+- UPI payments
+- Shopping
+- Food orders
+- Electricity bills
+- Rent
+- ATM withdrawals
+- Loan EMI
+- Insurance payments
+- Subscriptions
+- Refunds
+
+Create at least 60 fictional transactions across 3 months.
+
+All amounts must be fictional and clearly labelled as sample data.
+
+## STATEMENT PRIVACY
+
+- Client-side processing only.
+- No external upload.
+- No analytics tracking of statement content.
+- Provide a clear Delete Statement button.
+- Remove parsed data from memory and browser storage when the user deletes it.
+- Never save raw statement contents in localStorage.
+- Do not display full account numbers.
+- Mask account numbers if present.
+- Do not claim the uploaded document is verified by a bank.
+
+---
+
+# 5. LOAN MARKETPLACE
+
+Create loans.html.
+
+Loan product categories:
+- Personal Loan
+- Home Loan
+- Business Loan
+- Car Loan
+- Education Loan
+- Gold Loan
+
+Create filter sidebar:
+- Loan amount
+- Interest rate
+- Tenure
+- Employment type
+- Bank/NBFC
+- Processing fee
+
+Create product cards with:
+- Bank logo
+- Product name
+- Interest rate range
+- Loan amount range
+- Tenure
+- Processing fee
+- Estimated EMI
+- Compare
+- View Details
+- Apply Now
+
+All product offers should be clearly marked as illustrative demo products unless sourced from a real authorized partner.
+
+Create a comparison page with up to four products.
+
+---
+
+# 6. CREDIT CARD MARKETPLACE
+
+Create credit-cards.html.
+
+Categories:
+- Cashback
+- Rewards
+- Travel
+- Fuel
+- Shopping
+- Lifetime Free
+- RuPay
+- Secured Credit Cards
+
+Card information:
+- Bank
+- Card name
+- Joining fee
+- Annual fee
+- Reward rate
+- Cashback benefits
+- Lounge benefits
+- Eligibility requirements
+
+Features:
+- Search
+- Filters
+- Compare cards
+- Save card
+- View details
+
+---
+
+# 7. CREDIT SCORE PAGE
+
+Create credit-score.html.
+
+Design:
+- Credit score circular gauge
+- Credit score information
+- Payment history
+- Credit utilization
+- Credit age
+- Credit enquiries
+- Credit improvement guidance
+
+Use sample score data with a prominent DEMO label.
+
+Do not call an internally generated number an actual CIBIL or bureau score.
+
+---
+
+# 8. FINANCIAL CALCULATORS
+
+Create interactive calculators.
+
+EMI CALCULATOR:
+Inputs:
+- Loan amount
+- Annual interest rate
+- Loan tenure
+
+Outputs:
+- Monthly EMI
+- Total interest
+- Total repayment
+
+SIP CALCULATOR:
+- Monthly investment
+- Expected annual return
+- Duration
+- Estimated corpus
+- Invested amount
+- Estimated gains
+
+FD CALCULATOR:
+- Deposit amount
+- Interest rate
+- Duration
+- Maturity amount
+
+GST CALCULATOR:
+- Base amount
+- GST percentage
+- Total amount
+
+LOAN ELIGIBILITY CALCULATOR:
+- Monthly income
+- Existing EMIs
+- Interest rate
+- Tenure
+
+Show indicative eligibility estimates only.
+
+All calculators must update instantly.
+
+---
+
+# 9. CUSTOMER DASHBOARD
+
+Create a premium logged-in dashboard.
+
+Sidebar:
+- Overview
+- My Profile
+- My Applications
+- Saved Products
+- Credit Score
+- Bank Statement Analysis
+- My Documents
+- Notifications
+- Support
+- Settings
+- Logout
+
+Dashboard KPI cards:
+- Applications
+- Saved Products
+- Monthly Income
+- Monthly Expenses
+
+Overview:
+- Application timeline
+- Recent transactions from demo analysis
+- Financial insights
+- Saved loans
+- Recommended tools
+
+Create responsive charts and tables.
+
+---
+
+# 10. ADMIN DASHBOARD
+
+Create a separate admin interface.
+
+URL:
+admin/index.html
+
+Design a professional enterprise-grade dashboard.
+
+SIDEBAR:
+
+1. Dashboard
+2. User Management
+3. Lead Management
+4. Banks & NBFCs
+5. Loan Management
+6. Credit Card Management
+7. Applications
+8. Bank Statement Demo Records
+9. CMS Management
+10. Blog Management
+11. Notifications
+12. Analytics
+13. Team & Roles
+14. Settings
+15. Audit Logs
+
+DASHBOARD KPI CARDS:
+- Total Users
+- Total Leads
+- Total Applications
+- Loan Products
+- Credit Cards
+- Monthly Leads
+
+Charts:
+- Monthly registrations
+- Leads by source
+- Applications by product
+- Loan enquiries
+- Website traffic
+
+All figures must use fictional demo data.
+
+## ADMIN CRUD
+
+Implement complete JavaScript CRUD functionality.
+
+BANK MANAGEMENT:
+- Add bank
+- Edit bank
+- Delete bank
+- Upload logo preview
+- Bank name
+- Bank type
+- Contact information
+- Status
+
+LOAN MANAGEMENT:
+- Add loan
+- Edit loan
+- Delete loan
+- Loan name
+- Bank
+- Interest rate
+- Loan amount
+- Tenure
+- Processing fee
+- Publish/unpublish
+
+CREDIT CARD MANAGEMENT:
+- Add card
+- Edit card
+- Delete card
+- Bank
+- Card image
+- Annual fee
+- Benefits
+- Eligibility
+- Publish/unpublish
+
+LEAD MANAGEMENT:
+- Customer name
+- Phone
+- Product interested
+- Required amount
+- Lead source
+- Assigned executive
+- Lead status
+- Follow-up date
+
+APPLICATION MANAGEMENT:
+- Application ID
+- Customer
+- Product
+- Application status
+- Submission date
+- Notes
+
+USER MANAGEMENT:
+- Name
+- Email
+- Phone
+- Registration date
+- Status
+- View profile
+
+STATEMENT DEMO MANAGEMENT:
+- Statement analysis demo sessions
+- File processing status
+- Sample transaction statistics
+- Analysis date
+
+Do not store or expose raw bank statement files or complete transaction descriptions in admin demo records.
+
+---
+
+# 11. INTERACTIONS
+
+Every visible button must work.
+
+Implement:
+- Navigation
+- Dropdowns
+- Mobile menu
+- Search
+- Product filters
+- Product comparison
+- EMI calculations
+- SIP calculations
+- Login demo
+- Registration demo
+- Form validation
+- File upload
+- Statement analysis
+- Chart updates
+- Transaction search
+- CSV exports
+- PDF reports
+- Admin CRUD
+- Modal dialogs
+- Toast notifications
+- Confirmation dialogs
+- LocalStorage persistence for non-sensitive demo data
+
+Do not leave dead buttons or placeholder links.
+
+---
+
+# 12. RESPONSIVE DESIGN
+
+Desktop:
+- Premium wide layout
+- Sidebar dashboards
+- Grid-based cards
+
+Tablet:
+- Responsive grid
+- Collapsible sidebar
+
+Mobile:
+- Mobile navigation drawer
+- Single-column cards
+- Touch-friendly buttons
+- Responsive tables
+- Horizontally scrollable charts where needed
+
+Test at:
+- 1440px
+- 1024px
+- 768px
+- 390px
+- 360px
+
+---
+
+# 13. ANIMATIONS
+
+Use subtle premium animations:
+- Smooth scroll
+- Fade-in sections
+- Card hover effects
+- Animated KPI numbers
+- Progress bars
+- Circular score gauge
+- Chart transitions
+- Modal animations
+- Button hover states
+
+Avoid excessive animation and heavy effects.
+
+---
+
+# 14. IMPORTANT FUNCTIONAL REQUIREMENTS
+
+1. Build all pages, not just the homepage.
+2. Link all pages correctly.
+3. Use a common header and footer.
+4. Create reusable UI components.
+5. Use consistent spacing and typography.
+6. Every CRUD action must work.
+7. Every calculator must calculate real values.
+8. Bank Statement Analyzer must parse actual uploaded CSV and PDF files where possible.
+9. Include a realistic fictional sample statement.
+10. Do not use fake bank APIs.
+11. Do not claim real credit bureau verification.
+12. Never upload sensitive statement data to third-party services.
+13. Show demo labels wherever data is fictional.
+14. No blank sections or unfinished pages.
+15. Keep JavaScript modular and readable.
+16. Include README with instructions to run the project.
+
+---
+
+# 15. FINAL DELIVERABLE
+
+Build the complete FinBridge frontend demo.
+
+Required output:
+- All HTML pages
+- All CSS files
+- All JavaScript files
+- Assets
+- Sample bank statement data
+- Functional bank statement analyzer
+- Functional customer dashboard
+- Functional admin dashboard
+- Functional financial calculators
+- Responsive layouts
+- README
+
+The final result should look and feel like a premium Indian fintech company, not a basic student project.
+
+Prioritize excellent UI/UX, complete navigation, realistic demo data and genuinely working frontend interactions.
+
+Start by building the design system and homepage, then implement all remaining pages and functionality. Do not stop after creating a static homepage.

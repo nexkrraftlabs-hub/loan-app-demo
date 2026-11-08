@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Cards Marketplace — FinBridge</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="fb-top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a href="tel:18001234567"><i class="bi bi-telephone-fill"></i> 1800-123-4567 (Toll Free)</a>
+        <span class="divider"></span>
+        <a href="faq.html">Help Center</a>
+        <span class="divider"></span>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="d-flex align-items-center" id="fb-top-auth-container">
+        <a href="login.html">Login</a>
+        <span class="divider"></span>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fb-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fb-brand" href="index.html">
+        <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
+        <span>Fin<span class="highlight">Bridge</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fbNavbarMain">
+        <i class="bi bi-list fs-2 text-navy"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="fbNavbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="personal-loans.html">Personal Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="business-loans.html">Business Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link active" href="credit-cards.html">Credit Cards</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-score.html">Credit Score</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="insurance.html">Insurance</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="investments.html">Investments</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="bank-statement.html">Statement Analyzer</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="calculators.html">Financial Tools</a></li>
+        </ul>
+
+        <div class="fb-nav-actions" id="fb-auth-nav-container">
+          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="fb-btn-outline-dark d-none d-sm-inline-flex">Login</a>
+          <button class="fb-btn-primary" onclick="openApplyModal('FinBridge Card Network', 'Pre-Approved Credit Card', 150000)">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <h2 class="fw-bold text-navy mb-1">Explore Best Credit Cards in India (2026)</h2>
+          <p class="text-muted small mb-0">Compare reward multipliers, airport lounge access, fee waivers and welcome gifts</p>
+        </div>
+        <div class="d-flex gap-2">
+          <input type="text" id="cardSearchInput" class="form-control form-control-sm" placeholder="Search card by name or bank..." style="min-width: 240px;" onkeyup="filterCards()">
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="d-flex flex-wrap gap-2 mt-3" id="cardCategoryPills">
+        <button class="btn btn-sm btn-dark px-3 rounded-pill active" onclick="selectCardCategory('ALL', this)">All Cards</button>
+        <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill" onclick="selectCardCategory('cashback', this)">Cashback</button>
+        <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill" onclick="selectCardCategory('rewards', this)">Rewards & Shopping</button>
+        <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill" onclick="selectCardCategory('travel', this)">Travel & Lounge</button>
+        <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill" onclick="selectCardCategory('free', this)">Lifetime Free</button>
+        <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill" onclick="selectCardCategory('rupay', this)">RuPay UPI Cards</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Grid -->
+  <main class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cardsGridContainer">
+      <!-- 1. HDFC Millennia -->
+      <div class="col card-item-wrapper" data-category="cashback">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual fb-cc-platinum">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">HDFC BANK</span>
+              <span class="badge bg-warning text-dark fw-bold">MILLENNIA</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 4892</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 08/29</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">HDFC Millennia Credit Card</h5>
+          <p class="small text-muted mb-3">5% Cashback on Amazon, Flipkart, Swiggy, Zomato & Myntra</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong>₹ 1,000 + GST</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong>₹ 1,000 (Waived on ₹1L)</strong></div>
+            <div class="d-flex justify-content-between"><span>Domestic Lounge:</span><strong>8 Visits/year</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-hdfc-millennia', 'HDFC Millennia', 'Credit Card', 'HDFC Bank', '5% Cashback', '₹1,000')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('HDFC Bank', 'Millennia Credit Card', 150000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. SBI Cashback -->
+      <div class="col card-item-wrapper" data-category="cashback">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual fb-cc-cashback">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">SBI CARD</span>
+              <span class="badge bg-white text-success fw-bold">CASHBACK</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 7120</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 11/30</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">Cashback SBI Card</h5>
+          <p class="small text-muted mb-3">5% Instant Cashback on ALL Online Spends with no merchant limits</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong>₹ 999 + GST</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong>₹ 999 (Waived on ₹2L)</strong></div>
+            <div class="d-flex justify-content-between"><span>Cashback Auto-Credit:</span><strong>Next statement cycle</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-sbi-cashback', 'Cashback SBI Card', 'Credit Card', 'SBI Card', '5% Flat Cashback', '₹999')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('SBI Card', 'Cashback SBI Card', 200000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ICICI Coral RuPay -->
+      <div class="col card-item-wrapper" data-category="free rupay">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual" style="background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">ICICI BANK</span>
+              <span class="badge bg-light text-dark fw-bold">RUPAY UPI</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 1084</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 05/28</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">ICICI Coral RuPay Card</h5>
+          <p class="small text-muted mb-3">Lifetime Free • Link directly with UPI apps (Google Pay, PhonePe, Paytm)</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong class="text-success">NIL (Lifetime Free)</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong class="text-success">NIL</strong></div>
+            <div class="d-flex justify-content-between"><span>UPI Rewards:</span><strong>2 Reward Points / ₹100</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-icici-rupay', 'ICICI Coral RuPay', 'Credit Card', 'ICICI Bank', 'Lifetime Free + UPI', 'NIL')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('ICICI Bank', 'Coral RuPay Card', 100000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. ICICI Sapphiro Travel -->
+      <div class="col card-item-wrapper" data-category="travel rewards">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual fb-cc-travel">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">ICICI BANK</span>
+              <span class="badge bg-warning text-dark fw-bold">SAPPHIRO</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 9341</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 04/31</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">ICICI Sapphiro Credit Card</h5>
+          <p class="small text-muted mb-3">Premium Travel, Airport Lounge, Golf privileges & Buy 1 Get 1 Movie</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong>₹ 6,500 + GST</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong>₹ 3,500 (Waived on ₹6L)</strong></div>
+            <div class="d-flex justify-content-between"><span>International Lounge:</span><strong>2 Complimentary/year</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-icici-sapphiro', 'ICICI Sapphiro', 'Credit Card', 'ICICI Bank', 'Travel & Golf', '₹3,500')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('ICICI Bank', 'Sapphiro Credit Card', 350000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Axis Bank Magnus -->
+      <div class="col card-item-wrapper" data-category="travel rewards">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual" style="background: linear-gradient(135deg, #0F172A 0%, #991B1B 100%);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">AXIS BANK</span>
+              <span class="badge bg-white text-danger fw-bold">MAGNUS</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 5519</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 09/31</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">Axis Bank Magnus Credit Card</h5>
+          <p class="small text-muted mb-3">Ultra-luxury travel perks, unlimited lounge access with 8 guest visits</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong>₹ 12,500 + GST</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong>₹ 12,500 (Waived on ₹25L)</strong></div>
+            <div class="d-flex justify-content-between"><span>Reward Rate:</span><strong>12 EDGE Miles / ₹200</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-axis-magnus', 'Axis Magnus', 'Credit Card', 'Axis Bank', 'Ultra-Luxury Travel', '₹12,500')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('Axis Bank', 'Magnus Credit Card', 500000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Amazon Pay ICICI Card -->
+      <div class="col card-item-wrapper" data-category="free cashback">
+        <div class="fb-card-item">
+          <div class="fb-cc-visual" style="background: linear-gradient(135deg, #1E293B 0%, #D97706 100%);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fb-cc-bank">ICICI / AMAZON</span>
+              <span class="badge bg-warning text-dark fw-bold">PRIME</span>
+            </div>
+            <div class="fb-cc-chip"></div>
+            <div class="fb-cc-number">•••• •••• •••• 6204</div>
+            <div class="fb-cc-details">
+              <span>ADITYA SHARMA</span>
+              <span>EXP 02/30</span>
+            </div>
+          </div>
+          <h5 class="fw-bold text-navy mb-1">Amazon Pay ICICI Card</h5>
+          <p class="small text-muted mb-3">Lifetime Free • 5% Unlimited Amazon Cashback for Prime Members</p>
+          <div class="p-2 bg-light rounded-3 small mb-3">
+            <div class="d-flex justify-content-between mb-1"><span>Joining Fee:</span><strong class="text-success">NIL (Lifetime Free)</strong></div>
+            <div class="d-flex justify-content-between mb-1"><span>Annual Fee:</span><strong class="text-success">NIL</strong></div>
+            <div class="d-flex justify-content-between"><span>Cashback:</span><strong>5% on Amazon / 2% on bills</strong></div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-amazon-icici', 'Amazon Pay ICICI', 'Credit Card', 'ICICI Bank', '5% Unlimited Amazon', 'NIL')"><i class="bi bi-arrow-left-right"></i> Compare</button>
+            <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('ICICI Bank', 'Amazon Pay ICICI Card', 200000)">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fb-footer">
+    <div class="container text-center text-muted small">
+      <p>© 2026 FinBridge Technologies Private Limited. Demo Presentation Mode.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    let activeCat = 'ALL';
+
+    function selectCardCategory(cat, btn) {
+      activeCat = cat;
+      document.querySelectorAll('#cardCategoryPills button').forEach(b => {
+        b.classList.remove('btn-dark');
+        b.classList.add('btn-outline-secondary');
+      });
+      btn.classList.add('btn-dark');
+      btn.classList.remove('btn-outline-secondary');
+      filterCards();
+    }
+
+    function filterCards() {
+      const q = document.getElementById('cardSearchInput').value.toLowerCase().trim();
+      document.querySelectorAll('.card-item-wrapper').forEach(el => {
+        const cat = el.dataset.category || '';
+        const text = el.textContent.toLowerCase();
+        const matchesCat = (activeCat === 'ALL') || cat.includes(activeCat);
+        const matchesQuery = text.includes(q);
+
+        if (matchesCat && matchesQuery) {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

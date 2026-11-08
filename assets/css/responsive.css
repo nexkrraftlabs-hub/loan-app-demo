@@ -1,0 +1,109 @@
+/* ==========================================================================
+   FINBRIDGE — RESPONSIVE STYLESHEET
+   ========================================================================== */
+
+/* Laptop & Tablet Landscape (<= 1199px) */
+@media (max-width: 1199.98px) {
+  .fb-mega-menu {
+    width: 600px;
+  }
+  .fb-hero-title {
+    font-size: 2.4rem;
+  }
+  .fb-charts-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Portrait (<= 991.98px) */
+@media (max-width: 991.98px) {
+  .fb-hero-person-wrap {
+    display: none;
+  }
+  .fb-hero-title {
+    font-size: 2.15rem;
+  }
+  .fb-hero-trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fb-analyzer-section {
+    padding: 24px 20px;
+  }
+  .fb-steps-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fb-dash-sidebar {
+    transform: translateX(-100%);
+  }
+  .fb-dash-sidebar.show {
+    transform: translateX(0);
+  }
+  .fb-dash-main {
+    margin-left: 0;
+  }
+}
+
+/* Mobile Devices (<= 767.98px) */
+@media (max-width: 767.98px) {
+  .fb-top-bar {
+    display: none;
+  }
+  .fb-hero {
+    padding: 32px 0 40px;
+  }
+  .fb-hero-title {
+    font-size: 1.85rem;
+  }
+  .fb-hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .fb-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  .fb-steps-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .fb-lender-actions {
+    grid-template-columns: 1fr;
+  }
+  .fb-footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .fb-discovery-card {
+    padding: 20px 16px;
+  }
+  .fb-discovery-footer-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .fb-dash-content {
+    padding: 16px;
+  }
+  .fb-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Small Mobile (<= 430px) */
+@media (max-width: 430px) {
+  .fb-hero-title {
+    font-size: 1.65rem;
+  }
+  .fb-brand {
+    font-size: 1.35rem;
+  }
+  .fb-btn-primary, .fb-btn-outline {
+    width: 100%;
+  }
+  .fb-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .fb-discovery-tabs {
+    flex-direction: column;
+  }
+}
+

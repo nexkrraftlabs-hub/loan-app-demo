@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinBridge — Premium Financial Marketplace & Personal Finance</title>
+  
+  <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- FinBridge Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. TOP UTILITY BAR
+       ========================================================================== -->
+  <div class="fb-top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a href="tel:18001234567"><i class="bi bi-telephone-fill"></i> 1800-123-4567 (Toll Free)</a>
+        <span class="divider"></span>
+        <a href="faq.html">Help Center</a>
+        <span class="divider"></span>
+        <a href="about.html">About Us</a>
+        <span class="divider"></span>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="d-flex align-items-center" id="fb-top-auth-container">
+        <a href="javascript:void(0)" onclick="showToast('FinBridge Mobile App coming soon on iOS & Android!', 'info')">
+          <i class="bi bi-phone"></i> Download App
+        </a>
+        <span class="divider"></span>
+        <a href="login.html">Login</a>
+        <span class="divider"></span>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. MAIN NAVBAR
+       ========================================================================== -->
+  <nav class="fb-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fb-brand" href="index.html">
+        <div class="fb-brand-icon">
+          <i class="bi bi-layers-half"></i>
+        </div>
+        <span>Fin<span class="highlight">Bridge</span></span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fbNavbarMain" aria-controls="fbNavbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-navy"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="fbNavbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <!-- Personal Loans Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="personal-loans.html" data-bs-toggle="dropdown">
+              Personal Loans <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <div class="dropdown-menu fb-mega-menu shadow-lg">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <a href="personal-loans.html" class="fb-dropdown-item-custom">
+                    <div class="fb-dropdown-icon icon-yellow"><i class="bi bi-cash-stack"></i></div>
+                    <div>
+                      <div class="fb-dropdown-title">Personal Loan Overview</div>
+                      <p class="fb-dropdown-desc">Compare 25+ lenders with interest rates starting at 10.49% p.a.</p>
+                    </div>
+                  </a>
+                  <a href="personal-loans.html" class="fb-dropdown-item-custom">
+                    <div class="fb-dropdown-icon icon-green"><i class="bi bi-lightning-charge"></i></div>
+                    <div>
+                      <div class="fb-dropdown-title">Instant Cash Loan</div>
+                      <p class="fb-dropdown-desc">Paperless approval & disbursal directly to account in 2 hours.</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="emi-calculator.html" class="fb-dropdown-item-custom">
+                    <div class="fb-dropdown-icon icon-blue"><i class="bi bi-calculator"></i></div>
+                    <div>
+                      <div class="fb-dropdown-title">Personal Loan EMI Calculator</div>
+                      <p class="fb-dropdown-desc">Calculate exact monthly EMIs and interest amortization.</p>
+                    </div>
+                  </a>
+                  <a href="credit-score.html" class="fb-dropdown-item-custom">
+                    <div class="fb-dropdown-icon icon-purple"><i class="bi bi-speedometer2"></i></div>
+                    <div>
+                      <div class="fb-dropdown-title">Check Loan Pre-Approval</div>
+                      <p class="fb-dropdown-desc">Soft bureau inquiry with no impact on credit rating.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Business Loans Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="business-loans.html" data-bs-toggle="dropdown">
+              Business Loans <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border-0 py-2" style="border-radius:12px; min-width:240px;">
+              <li><a class="dropdown-item py-2 fw-semibold" href="business-loans.html"><i class="bi bi-shop me-2 text-primary"></i>MSME & Business Loans</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="business-loans.html"><i class="bi bi-graph-up-arrow me-2 text-success"></i>Working Capital Financing</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="business-loans.html"><i class="bi bi-building-check me-2 text-info"></i>Collateral-Free Machinery Loan</a></li>
+            </ul>
+          </li>
+
+          <!-- Credit Cards Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="credit-cards.html" data-bs-toggle="dropdown">
+              Credit Cards <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border-0 py-2" style="border-radius:12px; min-width:240px;">
+              <li><a class="dropdown-item py-2 fw-semibold" href="credit-cards.html"><i class="bi bi-credit-card-2-front me-2 text-primary"></i>All Credit Cards</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="credit-cards.html?cat=cashback"><i class="bi bi-percent me-2 text-success"></i>Cashback & Rewards Cards</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="credit-cards.html?cat=free"><i class="bi bi-gift me-2 text-warning"></i>Lifetime Free Cards</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="credit-cards.html?cat=travel"><i class="bi bi-airplane me-2 text-purple"></i>Travel & Lounge Access Cards</a></li>
+            </ul>
+          </li>
+
+          <!-- Credit Score -->
+          <li class="nav-item">
+            <a class="nav-link fb-nav-link" href="credit-score.html">Credit Score</a>
+          </li>
+
+          <!-- Insurance Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="insurance.html" data-bs-toggle="dropdown">
+              Insurance <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border-0 py-2" style="border-radius:12px; min-width:220px;">
+              <li><a class="dropdown-item py-2 fw-semibold" href="insurance.html"><i class="bi bi-heart-pulse me-2 text-danger"></i>Health Insurance</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="insurance.html"><i class="bi bi-shield-check me-2 text-warning"></i>Term Life Insurance</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="insurance.html"><i class="bi bi-car-front me-2 text-primary"></i>Motor & Car Insurance</a></li>
+            </ul>
+          </li>
+
+          <!-- Investments Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="investments.html" data-bs-toggle="dropdown">
+              Investments <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border-0 py-2" style="border-radius:12px; min-width:220px;">
+              <li><a class="dropdown-item py-2 fw-semibold" href="investments.html"><i class="bi bi-pie-chart me-2 text-success"></i>Mutual Funds & SIPs</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="investments.html"><i class="bi bi-safe me-2 text-primary"></i>High-Yield Fixed Deposits</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="investments.html"><i class="bi bi-coin me-2 text-warning"></i>Digital Gold & Sovereign Bonds</a></li>
+            </ul>
+          </li>
+
+          <!-- Financial Tools Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fb-nav-link dropdown-toggle" href="calculators.html" data-bs-toggle="dropdown">
+              Financial Tools <i class="bi bi-chevron-down chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border-0 py-2" style="border-radius:12px; min-width:260px;">
+              <li><a class="dropdown-item py-2 fw-semibold" href="bank-statement.html"><i class="bi bi-file-earmark-spreadsheet me-2 text-success"></i>Bank Statement Analyzer</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="emi-calculator.html"><i class="bi bi-calculator me-2 text-primary"></i>Loan EMI Calculator</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="sip-calculator.html"><i class="bi bi-graph-up me-2 text-warning"></i>SIP Wealth Calculator</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="fd-calculator.html"><i class="bi bi-piggy-bank me-2 text-info"></i>FD Maturity Calculator</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Nav Right Actions -->
+        <div class="fb-nav-actions" id="fb-auth-nav-container">
+          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search Marketplace" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <a href="login.html" class="fb-btn-outline-dark d-none d-sm-inline-flex">Login</a>
+          <button class="fb-btn-primary" onclick="openApplyModal('FinBridge Partner Network', 'Pre-Approved Financial Loan', 500000)">
+            Apply Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       3. HERO SECTION (Matching Reference Image)
+       ========================================================================== -->
+  <section class="fb-hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        
+        <!-- Left Side: Copy, Badges & Trust Points -->
+        <div class="col-lg-5">
+          <div class="fb-eyebrow-pill">
+            <i class="bi bi-compass text-success"></i> YOUR FINANCIAL JOURNEY STARTS HERE
+          </div>
+          <h1 class="fb-hero-title">
+            Make Smarter Financial Decisions with <span class="text-highlight">FinBridge.</span>
+          </h1>
+          <p class="fb-hero-subtitle">
+            Compare loans, credit cards, insurance and investment options, check your credit health, analyze your bank statement and choose what's best for you — all in one place.
+          </p>
+
+          <div class="fb-hero-actions">
+            <a href="personal-loans.html" class="fb-btn-primary">
+              Explore Financial Products <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="credit-score.html" class="fb-btn-outline">
+              Check Your Financial Health
+            </a>
+          </div>
+
+          <!-- 4 Trust Indicators in 4-column layout -->
+          <div class="fb-hero-trust">
+            <div class="fb-trust-item">
+              <div class="fb-trust-icon"><i class="bi bi-collection"></i></div>
+              <span class="fb-trust-label">Compare Multiple Options</span>
+            </div>
+            <div class="fb-trust-item">
+              <div class="fb-trust-icon"><i class="bi bi-pencil-square"></i></div>
+              <span class="fb-trust-label">Easy & Guided Application</span>
+            </div>
+            <div class="fb-trust-item">
+              <div class="fb-trust-icon"><i class="bi bi-tools"></i></div>
+              <span class="fb-trust-label">Powerful Financial Tools</span>
+            </div>
+            <div class="fb-trust-item">
+              <div class="fb-trust-icon"><i class="bi bi-shield-check"></i></div>
+              <span class="fb-trust-label">Secure & Private (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center: Hero Person Pointing to the Card -->
+        <div class="col-lg-3 d-none d-lg-block text-center">
+          <div class="fb-hero-person-wrap">
+            <div class="fb-hero-person-bg"></div>
+            <img src="assets/images/hero-person.png" alt="FinBridge Advisor" class="fb-hero-person-img img-fluid">
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Discovery Card (Tabs + Form) -->
+        <div class="col-lg-4">
+          <div class="fb-discovery-card">
+            <!-- 3 Tabs -->
+            <div class="fb-discovery-tabs">
+              <button class="fb-discovery-tab active" data-tab="loan">
+                <i class="bi bi-person-fill"></i> Personal Loan
+              </button>
+              <button class="fb-discovery-tab" data-tab="card">
+                <i class="bi bi-credit-card"></i> Credit Card
+              </button>
+              <button class="fb-discovery-tab" data-tab="score">
+                <i class="bi bi-speedometer2"></i> Credit Score
+              </button>
+            </div>
+
+            <!-- TAB 1: PERSONAL LOAN FORM -->
+            <div id="discovery-form-loan">
+              <h4>Get Personal Loan Offers</h4>
+              <p class="subtitle">Check offers from multiple lenders (Demo)</p>
+              
+              <form onsubmit="handleHeroLoanSubmit(event)">
+                <div class="row g-2 mb-2">
+                  <div class="col-6">
+                    <label class="fb-form-label">Loan Amount</label>
+                    <select class="fb-form-select" id="heroLoanAmount">
+                      <option value="100000">₹ 1,00,000</option>
+                      <option value="300000">₹ 3,00,000</option>
+                      <option value="500000" selected>₹ 5,00,000</option>
+                      <option value="1000000">₹ 10,00,000</option>
+                      <option value="2500000">₹ 25,00,000</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="fb-form-label">Employment Type</label>
+                    <select class="fb-form-select" id="heroEmployment">
+                      <option selected>Salaried</option>
+                      <option>Self-Employed</option>
+                      <option>Business Owner</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="fb-form-label">Monthly Income</label>
+                    <select class="fb-form-select" id="heroIncome">
+                      <option value="35000">₹ 35,000</option>
+                      <option value="50000">₹ 50,000</option>
+                      <option value="75000" selected>₹ 75,000</option>
+                      <option value="120000">₹ 1,20,000</option>
+                      <option value="250000">₹ 2,50,000</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="fb-form-label">City</label>
+                    <select class="fb-form-select" id="heroCity">
+                      <option selected>New Delhi</option>
+                      <option>Mumbai</option>
+                      <option>Bengaluru</option>
+                      <option>Hyderabad</option>
+                      <option>Chennai</option>
+                      <option>Pune</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="fb-btn-primary w-100 py-2">
+                  Check Offers <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- TAB 2: CREDIT CARD FORM (Hidden initially) -->
+            <div id="discovery-form-card" class="d-none">
+              <h4>Find Best Credit Cards</h4>
+              <p class="subtitle">Match rewards, cashback & lounge access</p>
+              <form onsubmit="event.preventDefault(); window.location.href='credit-cards.html';">
+                <div class="mb-2">
+                  <label class="fb-form-label">Monthly In-Hand Income</label>
+                  <select class="fb-form-select">
+                    <option>Above ₹ 50,000</option>
+                    <option selected>Above ₹ 75,000</option>
+                    <option>Above ₹ 1,50,000</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="fb-form-label">Primary Spend Category</label>
+                  <select class="fb-form-select">
+                    <option selected>Online Shopping & Cashback</option>
+                    <option>Airport Lounge & Travel</option>
+                    <option>Fuel Surcharge Waiver</option>
+                    <option>Dining & Entertainment</option>
+                  </select>
+                </div>
+                <button type="submit" class="fb-btn-primary w-100 py-2">
+                  Explore Cards <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- TAB 3: CREDIT SCORE FORM (Hidden initially) -->
+            <div id="discovery-form-score" class="d-none">
+              <h4>Free Credit Health Check</h4>
+              <p class="subtitle">Simulate credit score check with 0 impact</p>
+              <form onsubmit="event.preventDefault(); window.location.href='credit-score.html';">
+                <div class="mb-2">
+                  <label class="fb-form-label">Full Name as per PAN</label>
+                  <input type="text" class="fb-form-control" placeholder="e.g. Aditya Sharma" required>
+                </div>
+                <div class="mb-3">
+                  <label class="fb-form-label">Mobile Number</label>
+                  <input type="tel" class="fb-form-control" placeholder="+91 98765 43210" required>
+                </div>
+                <button type="submit" class="fb-btn-primary w-100 py-2">
+                  Check Credit Score <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- 3 Quick Stats Under Form -->
+            <div class="fb-discovery-footer-stats">
+              <div class="fb-stat-pill">
+                <div class="fb-stat-pill-icon"><i class="bi bi-percent"></i></div>
+                <div class="fb-stat-pill-text">
+                  Interest from
+                  <strong>10.49% p.a.</strong>
+                </div>
+              </div>
+              <div class="fb-stat-pill">
+                <div class="fb-stat-pill-icon"><i class="bi bi-cash-stack"></i></div>
+                <div class="fb-stat-pill-text">
+                  Loan up to
+                  <strong>₹40 Lakhs</strong>
+                </div>
+              </div>
+              <div class="fb-stat-pill">
+                <div class="fb-stat-pill-icon"><i class="bi bi-calendar4-week"></i></div>
+                <div class="fb-stat-pill-text">
+                  Tenure up to
+                  <strong>5 Years</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. PRODUCT CATEGORIES GRID (Section 2 in screenshot)
+       ========================================================================== -->
+  <section class="fb-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fb-section-title">Explore Our Financial Products</h2>
+        </div>
+        <div>
+          <a href="personal-loans.html" class="fw-bold text-navy small">
+            View All Products <i class="bi bi-arrow-right text-success"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-8 g-3">
+        <!-- 1. Personal Loan -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-yellow">
+              <i class="bi bi-wallet2"></i>
+            </div>
+            <div class="fb-product-name">Personal Loan</div>
+            <div class="fb-product-desc">Up to ₹40 Lakhs from 10.49% p.a.</div>
+            <a href="personal-loans.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. Business Loan -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-blue">
+              <i class="bi bi-shop"></i>
+            </div>
+            <div class="fb-product-name">Business Loan</div>
+            <div class="fb-product-desc">Up to ₹2 Crore from 11.00% p.a.</div>
+            <a href="business-loans.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 3. Credit Cards -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-cyan">
+              <i class="bi bi-credit-card-2-front"></i>
+            </div>
+            <div class="fb-product-name">Credit Cards</div>
+            <div class="fb-product-desc">Rewards, cashback & lifestyle benefits</div>
+            <a href="credit-cards.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 4. Home Loan -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-orange">
+              <i class="bi bi-house-door"></i>
+            </div>
+            <div class="fb-product-name">Home Loan</div>
+            <div class="fb-product-desc">Up to ₹5 Crore from 8.50% p.a.</div>
+            <a href="personal-loans.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 5. Car Loan -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-purple">
+              <i class="bi bi-car-front"></i>
+            </div>
+            <div class="fb-product-name">Car Loan</div>
+            <div class="fb-product-desc">Up to ₹50 Lakhs from 8.99% p.a.</div>
+            <a href="personal-loans.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 6. Health Insurance -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-red">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <div class="fb-product-name">Health Insurance</div>
+            <div class="fb-product-desc">Coverage up to ₹1 Crore</div>
+            <a href="insurance.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 7. Life Insurance -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-amber">
+              <i class="bi bi-shield-plus"></i>
+            </div>
+            <div class="fb-product-name">Life Insurance</div>
+            <div class="fb-product-desc">Cover up to ₹5 Crore</div>
+            <a href="insurance.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 8. Investments -->
+        <div class="col">
+          <div class="fb-product-card">
+            <div class="fb-product-icon-box icon-green">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <div class="fb-product-name">Investments</div>
+            <div class="fb-product-desc">Grow your wealth with smart options</div>
+            <a href="investments.html" class="fb-product-link">Explore Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. BANK STATEMENT ANALYZER SECTION (Section 3 in screenshot)
+       ========================================================================== -->
+  <section class="container mb-5">
+    <div class="fb-analyzer-section">
+      <div class="row align-items-center g-4">
+        
+        <!-- Left Column: Copy, Bullet points & CTA -->
+        <div class="col-lg-5">
+          <span class="fb-tag-pill">
+            <span class="badge bg-success rounded-pill px-2 py-1 text-white">NEW</span> Bank Statement Analyzer
+          </span>
+          <h2 class="fb-analyzer-heading">Understand Your Money Better.</h2>
+          <p class="fb-analyzer-sub">
+            Upload your bank statement and get detailed insights into your income, expenses, EMIs, subscriptions and savings.
+          </p>
+
+          <ul class="fb-feature-list">
+            <li><i class="bi bi-check-circle-fill"></i> Track monthly income and total expenses</li>
+            <li><i class="bi bi-check-circle-fill"></i> Understand your spending habits</li>
+            <li><i class="bi bi-check-circle-fill"></i> Identify recurring payments & subscriptions</li>
+            <li><i class="bi bi-check-circle-fill"></i> Detect possible EMI transactions</li>
+            <li><i class="bi bi-check-circle-fill"></i> Calculate monthly savings and savings rate</li>
+          </ul>
+
+          <a href="bank-statement.html" class="fb-btn-primary">
+            Analyze My Bank Statement <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Right Column: Interactive Sample Analysis Preview -->
+        <div class="col-lg-7">
+          <div class="fb-analytics-preview-card">
+            <div class="fb-preview-header">
+              <span class="fb-preview-badge">
+                <i class="bi bi-stars text-primary"></i> Sample Analysis Preview
+              </span>
+              <span class="badge bg-light text-muted border">100% Client-Side Privacy</span>
+            </div>
+
+            <!-- Top 3 KPI stats -->
+            <div class="fb-kpi-grid">
+              <div class="fb-kpi-item">
+                <div class="fb-kpi-icon icon-green"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="fb-kpi-content">
+                  <span class="fb-kpi-label">Total Income</span>
+                  <div class="fb-kpi-val">₹ 1,20,000</div>
+                </div>
+              </div>
+              <div class="fb-kpi-item">
+                <div class="fb-kpi-icon icon-red"><i class="bi bi-graph-down-arrow"></i></div>
+                <div class="fb-kpi-content">
+                  <span class="fb-kpi-label">Total Expenses</span>
+                  <div class="fb-kpi-val">₹ 82,500</div>
+                </div>
+              </div>
+              <div class="fb-kpi-item">
+                <div class="fb-kpi-icon icon-blue"><i class="bi bi-bank"></i></div>
+                <div class="fb-kpi-content">
+                  <span class="fb-kpi-label">Net Savings</span>
+                  <div class="fb-kpi-val">₹ 37,500</div>
+                  <span class="fb-kpi-sub">Savings Rate: 31.3%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two Charts Side by Side -->
+            <div class="fb-charts-split">
+              <!-- Monthly Cash Flow -->
+              <div class="fb-chart-box">
+                <div class="fb-chart-box-title">
+                  <span>Monthly Cash Flow <small class="text-muted fw-normal">(Sample Data)</small></span>
+                </div>
+                <div style="height: 180px; position: relative;">
+                  <canvas id="homeCashFlowChart"></canvas>
+                </div>
+              </div>
+
+              <!-- Expense Breakdown -->
+              <div class="fb-chart-box">
+                <div class="fb-chart-box-title">
+                  <span>Expense Breakdown</span>
+                </div>
+                <div style="height: 140px; position: relative;">
+                  <canvas id="homeExpenseDonutChart"></canvas>
+                </div>
+                <div class="text-center mt-2 small text-muted">
+                  <strong class="text-navy">₹82,500</strong> Total Monthly Expenses
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. FEATURED LOAN OFFERS (Section 4 in screenshot)
+       ========================================================================== -->
+  <section class="fb-section bg-white border-top border-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fb-section-title">Featured Loan Offers</h2>
+          <p class="fb-section-subtitle">Compare personal loan offers from leading lenders (Demo)</p>
+        </div>
+        <div>
+          <a href="personal-loans.html" class="fw-bold text-navy small">
+            View All Loan Offers <i class="bi bi-arrow-right text-success"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+        <!-- 1. FinTrust Bank -->
+        <div class="col">
+          <div class="fb-lender-card">
+            <div class="fb-lender-header">
+              <div class="fb-lender-brand">
+                <img src="assets/images/lender-fintrust.png" alt="FinTrust Bank" class="fb-lender-logo-img">
+                <h5 class="fb-lender-name">FinTrust Bank</h5>
+              </div>
+              <span class="fb-badge-product">Personal Loan</span>
+            </div>
+
+            <div class="fb-lender-metrics">
+              <div class="fb-metric-item">
+                <span class="label">Interest Rate</span>
+                <span class="val text-success">10.49% – 16.99%</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Loan Amount</span>
+                <span class="val">₹50,000 – ₹40 Lakhs</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Tenure</span>
+                <span class="val">12 – 60 Months</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Processing Fee</span>
+                <span class="val">Up to 2.5%</span>
+              </div>
+            </div>
+
+            <div class="fb-lender-actions">
+              <button class="btn btn-sm btn-outline-dark" onclick="toggleCompare('ln-fintrust', 'FinTrust Personal Loan', 'Personal Loan', 'FinTrust Bank', '10.49% p.a.', 'Up to 2.5%')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary" onclick="openApplyModal('FinTrust Bank', 'Personal Loan', 500000)">
+                Check Eligibility
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Unity Finance -->
+        <div class="col">
+          <div class="fb-lender-card">
+            <div class="fb-lender-header">
+              <div class="fb-lender-brand">
+                <img src="assets/images/lender-unity.png" alt="Unity Finance" class="fb-lender-logo-img">
+                <h5 class="fb-lender-name">Unity Finance</h5>
+              </div>
+              <span class="fb-badge-product">Personal Loan</span>
+            </div>
+
+            <div class="fb-lender-metrics">
+              <div class="fb-metric-item">
+                <span class="label">Interest Rate</span>
+                <span class="val text-success">10.75% – 17.50%</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Loan Amount</span>
+                <span class="val">₹50,000 – ₹40 Lakhs</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Tenure</span>
+                <span class="val">12 – 60 Months</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Processing Fee</span>
+                <span class="val">Up to 2.0%</span>
+              </div>
+            </div>
+
+            <div class="fb-lender-actions">
+              <button class="btn btn-sm btn-outline-dark" onclick="toggleCompare('ln-unity', 'Unity Instant Loan', 'Personal Loan', 'Unity Finance', '10.75% p.a.', 'Up to 2.0%')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary" onclick="openApplyModal('Unity Finance', 'Personal Loan', 500000)">
+                Check Eligibility
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Capital Plus -->
+        <div class="col">
+          <div class="fb-lender-card">
+            <div class="fb-lender-header">
+              <div class="fb-lender-brand">
+                <img src="assets/images/lender-capital.png" alt="Capital Plus" class="fb-lender-logo-img">
+                <h5 class="fb-lender-name">Capital Plus</h5>
+              </div>
+              <span class="fb-badge-product">Personal Loan</span>
+            </div>
+
+            <div class="fb-lender-metrics">
+              <div class="fb-metric-item">
+                <span class="label">Interest Rate</span>
+                <span class="val text-success">11.00% – 18.00%</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Loan Amount</span>
+                <span class="val">₹50,000 – ₹40 Lakhs</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Tenure</span>
+                <span class="val">12 – 60 Months</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Processing Fee</span>
+                <span class="val">Up to 2.5%</span>
+              </div>
+            </div>
+
+            <div class="fb-lender-actions">
+              <button class="btn btn-sm btn-outline-dark" onclick="toggleCompare('ln-capital', 'Capital Plus Flexi Loan', 'Personal Loan', 'Capital Plus', '11.00% p.a.', 'Up to 2.5%')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary" onclick="openApplyModal('Capital Plus', 'Personal Loan', 500000)">
+                Check Eligibility
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. QuickLoan -->
+        <div class="col">
+          <div class="fb-lender-card">
+            <div class="fb-lender-header">
+              <div class="fb-lender-brand">
+                <img src="assets/images/lender-quick.png" alt="QuickLoan" class="fb-lender-logo-img">
+                <h5 class="fb-lender-name">QuickLoan</h5>
+              </div>
+              <span class="fb-badge-product">Personal Loan</span>
+            </div>
+
+            <div class="fb-lender-metrics">
+              <div class="fb-metric-item">
+                <span class="label">Interest Rate</span>
+                <span class="val text-success">10.99% – 17.25%</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Loan Amount</span>
+                <span class="val">₹50,000 – ₹40 Lakhs</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Tenure</span>
+                <span class="val">12 – 60 Months</span>
+              </div>
+              <div class="fb-metric-item">
+                <span class="label">Processing Fee</span>
+                <span class="val">Up to 2.25%</span>
+              </div>
+            </div>
+
+            <div class="fb-lender-actions">
+              <button class="btn btn-sm btn-outline-dark" onclick="toggleCompare('ln-quick', 'QuickLoan Express', 'Personal Loan', 'QuickLoan', '10.99% p.a.', 'Up to 2.25%')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary" onclick="openApplyModal('QuickLoan', 'Personal Loan', 500000)">
+                Check Eligibility
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. CREDIT CARDS COMPARISON SHOWCASE
+       ========================================================================== -->
+  <section class="fb-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fb-section-title">Featured Credit Cards</h2>
+          <p class="fb-section-subtitle">Pick cards that match your lifestyle, airport travel & online shopping</p>
+        </div>
+        <div>
+          <a href="credit-cards.html" class="fw-bold text-navy small">
+            View All Credit Cards <i class="bi bi-arrow-right text-success"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="fb-card-item">
+            <div class="fb-cc-visual fb-cc-platinum">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fb-cc-bank">HDFC BANK</span>
+                <span class="badge bg-warning text-dark fw-bold">MILLENNIA</span>
+              </div>
+              <div class="fb-cc-chip"></div>
+              <div class="fb-cc-number">•••• •••• •••• 4892</div>
+              <div class="fb-cc-details">
+                <span>ADITYA SHARMA</span>
+                <span>EXP 08/29</span>
+              </div>
+            </div>
+
+            <h5 class="fw-bold text-navy mb-1">HDFC Millennia Credit Card</h5>
+            <p class="small text-muted mb-3">5% Cashback on Amazon, Flipkart, Swiggy & Zomato</p>
+
+            <div class="p-2 bg-light rounded-3 small mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Joining Fee:</span>
+                <strong>₹ 1,000 + GST</strong>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="text-muted">Annual Fee:</span>
+                <strong>₹ 1,000 (Waived on ₹1L spend)</strong>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-hdfc-millennia', 'HDFC Millennia', 'Credit Card', 'HDFC Bank', '5% Cashback', '₹1,000/yr')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('HDFC Bank', 'Millennia Credit Card', 150000)">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="fb-card-item">
+            <div class="fb-cc-visual fb-cc-cashback">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fb-cc-bank">SBI CARD</span>
+                <span class="badge bg-white text-success fw-bold">CASHBACK</span>
+              </div>
+              <div class="fb-cc-chip"></div>
+              <div class="fb-cc-number">•••• •••• •••• 7120</div>
+              <div class="fb-cc-details">
+                <span>ADITYA SHARMA</span>
+                <span>EXP 11/30</span>
+              </div>
+            </div>
+
+            <h5 class="fw-bold text-navy mb-1">Cashback SBI Card</h5>
+            <p class="small text-muted mb-3">5% Instant Cashback on ALL Online Spends with no merchant caps</p>
+
+            <div class="p-2 bg-light rounded-3 small mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Joining Fee:</span>
+                <strong>₹ 999 + GST</strong>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="text-muted">Annual Fee:</span>
+                <strong>₹ 999 (Waived on ₹2L spend)</strong>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-sbi-cashback', 'Cashback SBI Card', 'Credit Card', 'SBI Card', '5% Flat Cashback', '₹999/yr')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('SBI Card', 'Cashback SBI Card', 200000)">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="fb-card-item">
+            <div class="fb-cc-visual fb-cc-travel">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fb-cc-bank">ICICI BANK</span>
+                <span class="badge bg-warning text-dark fw-bold">SAPPHIRO</span>
+              </div>
+              <div class="fb-cc-chip"></div>
+              <div class="fb-cc-number">•••• •••• •••• 9341</div>
+              <div class="fb-cc-details">
+                <span>ADITYA SHARMA</span>
+                <span>EXP 04/31</span>
+              </div>
+            </div>
+
+            <h5 class="fw-bold text-navy mb-1">ICICI Sapphiro Credit Card</h5>
+            <p class="small text-muted mb-3">Complimentary Domestic & International Lounge Visits + Golf rounds</p>
+
+            <div class="p-2 bg-light rounded-3 small mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Joining Fee:</span>
+                <strong>₹ 6,500 + GST</strong>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="text-muted">Annual Fee:</span>
+                <strong>₹ 3,500 (Waived on ₹6L spend)</strong>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-dark flex-grow-1" onclick="toggleCompare('cc-icici-sapphiro', 'ICICI Sapphiro', 'Credit Card', 'ICICI Bank', 'Lounge & Golf Perks', '₹3,500/yr')">
+                <i class="bi bi-arrow-left-right"></i> Compare
+              </button>
+              <button class="btn btn-sm fb-btn-primary flex-grow-1" onclick="openApplyModal('ICICI Bank', 'Sapphiro Credit Card', 350000)">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. HOW FINBRIDGE WORKS (4-Step Flow)
+       ========================================================================== -->
+  <section class="fb-section bg-light border-top">
+    <div class="container text-center">
+      <h2 class="fb-section-title">How FinBridge Works</h2>
+      <p class="fb-section-subtitle mb-4">Your streamlined 4-step financial journey from discovery to approval</p>
+
+      <div class="fb-steps-wrapper">
+        <div class="fb-step-card">
+          <div class="fb-step-num">1</div>
+          <h5 class="fb-step-title">Explore Products</h5>
+          <p class="fb-step-desc">Browse pre-negotiated personal loans, business credit lines, cards and insurance plans.</p>
+        </div>
+        <div class="fb-step-card">
+          <div class="fb-step-num">2</div>
+          <h5 class="fb-step-title">Check Eligibility</h5>
+          <p class="fb-step-desc">Enter basic demographic and income data with 0 credit bureau penalty or score drop.</p>
+        </div>
+        <div class="fb-step-card">
+          <div class="fb-step-num">3</div>
+          <h5 class="fb-step-title">Compare Options</h5>
+          <p class="fb-step-desc">Analyze real APRs, processing charges, cashback perks and monthly cashflow requirements.</p>
+        </div>
+        <div class="fb-step-card">
+          <div class="fb-step-num">4</div>
+          <h5 class="fb-step-title">Submit Enquiry</h5>
+          <p class="fb-step-desc">Submit your paperless digital KYC and track real-time verification and disbursal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. FINANCIAL CALCULATORS HUB
+       ========================================================================== -->
+  <section class="fb-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fb-section-title">Financial Calculators & Smart Tools</h2>
+          <p class="fb-section-subtitle">Plan your debt repayment, SIP wealth growth and tax liability with ease</p>
+        </div>
+        <div>
+          <a href="calculators.html" class="fw-bold text-navy small">
+            All Calculators <i class="bi bi-arrow-right text-success"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- 1. EMI Calculator -->
+        <div class="col">
+          <div class="fb-calc-card">
+            <div class="fb-calc-icon"><i class="bi bi-calculator"></i></div>
+            <h5 class="fw-bold text-navy mb-2">Loan EMI Calculator</h5>
+            <p class="small text-muted mb-4">Calculate exact monthly installments, interest breakdown and amortization table.</p>
+            <a href="emi-calculator.html" class="fb-btn-outline-dark w-100 justify-content-center">
+              Open EMI Calculator <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. SIP Calculator -->
+        <div class="col">
+          <div class="fb-calc-card">
+            <div class="fb-calc-icon"><i class="bi bi-graph-up"></i></div>
+            <h5 class="fw-bold text-navy mb-2">SIP Wealth Calculator</h5>
+            <p class="small text-muted mb-4">Forecast compounding returns on monthly mutual fund investments over time.</p>
+            <a href="sip-calculator.html" class="fb-btn-outline-dark w-100 justify-content-center">
+              Open SIP Calculator <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. FD Calculator -->
+        <div class="col">
+          <div class="fb-calc-card">
+            <div class="fb-calc-icon"><i class="bi bi-piggy-bank"></i></div>
+            <h5 class="fw-bold text-navy mb-2">Fixed Deposit (FD) Calculator</h5>
+            <p class="small text-muted mb-4">Determine quarterly compounding interest and maturity values on bank term deposits.</p>
+            <a href="fd-calculator.html" class="fb-btn-outline-dark w-100 justify-content-center">
+              Open FD Calculator <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. FINANCIAL LEARNING CENTER (Editorial Cards)
+       ========================================================================== -->
+  <section class="fb-section bg-light border-top">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fb-section-title">Financial Learning Center</h2>
+          <p class="fb-section-subtitle">Actionable guides from financial advisors and market analysts</p>
+        </div>
+        <div>
+          <a href="blog.html" class="fw-bold text-navy small">
+            Read All Articles <i class="bi bi-arrow-right text-success"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Article 1 -->
+        <div class="col">
+          <div class="fb-blog-card">
+            <div class="fb-blog-img bg-dark text-white"><i class="bi bi-speedometer2"></i></div>
+            <div class="fb-blog-content">
+              <span class="fb-blog-badge">Credit Health</span>
+              <h5 class="fb-blog-title">
+                <a href="article-detail.html">7 Practical Ways to Boost Your CIBIL Score Above 780 in 2026</a>
+              </h5>
+              <p class="small text-muted">Learn how credit utilization, debt consolidation and timely payments impact your loan rates.</p>
+              <div class="fb-blog-meta">
+                <span><i class="bi bi-clock me-1"></i> 5 min read</span>
+                <span>• 06 Mar 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col">
+          <div class="fb-blog-card">
+            <div class="fb-blog-img" style="background: linear-gradient(135deg, #00A878, #142B4A);"><i class="bi bi-shield-check"></i></div>
+            <div class="fb-blog-content">
+              <span class="fb-blog-badge">Personal Loans</span>
+              <h5 class="fb-blog-title">
+                <a href="article-detail.html">Understanding Reducing vs Flat Interest Rates Before You Sign</a>
+              </h5>
+              <p class="small text-muted">A clear breakdown of why reducing balance loans save you thousands over traditional flat rates.</p>
+              <div class="fb-blog-meta">
+                <span><i class="bi bi-clock me-1"></i> 6 min read</span>
+                <span>• 02 Mar 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col">
+          <div class="fb-blog-card">
+            <div class="fb-blog-img" style="background: linear-gradient(135deg, #1D3D63, #38BDF8);"><i class="bi bi-pie-chart"></i></div>
+            <div class="fb-blog-content">
+              <span class="fb-blog-badge">Budgeting & Analytics</span>
+              <h5 class="fb-blog-title">
+                <a href="article-detail.html">How Analyzing Your Bank Statement Can Reveal ₹10,000 in Hidden Savings</a>
+              </h5>
+              <p class="small text-muted">Unused recurring subscriptions, forgotten gym memberships and invisible bank fees exposed.</p>
+              <div class="fb-blog-meta">
+                <span><i class="bi bi-clock me-1"></i> 4 min read</span>
+                <span>• 25 Feb 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FAQ ACCORDION SECTION
+       ========================================================================== -->
+  <section class="fb-section">
+    <div class="container" style="max-width: 860px;">
+      <div class="text-center mb-5">
+        <h2 class="fb-section-title">Frequently Asked Questions</h2>
+        <p class="fb-section-subtitle">Everything you need to know about FinBridge and our financial marketplace</p>
+      </div>
+
+      <div class="accordion shadow-sm" id="fbHomeFaq" style="border-radius:14px; overflow:hidden;">
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header">
+            <button class="accordion-button fw-bold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Does checking loan offers on FinBridge affect my CIBIL credit score?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#fbHomeFaq">
+            <div class="accordion-body text-muted small">
+              No. When you explore loan options and check your pre-approved eligibility on FinBridge, our platform performs a "soft inquiry" (or simulated eligibility check). Soft inquiries have zero impact on your credit bureau score.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Is my Bank Statement uploaded to an external server?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#fbHomeFaq">
+            <div class="accordion-body text-muted small">
+              Never. The FinBridge Bank Statement Analyzer works 100% locally in your browser sandbox using JavaScript libraries (PapaParse & PDF.js). Your transaction data never leaves your device and is not saved to any database.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              How quickly are personal loan applications processed and disbursed?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#fbHomeFaq">
+            <div class="accordion-body text-muted small">
+              Most partner lenders offer instant in-principle digital sanction within minutes. Once Aadhaar OTP and video KYC are completed, funds are typically disbursed into your bank account within 2 to 24 hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Are there any charges for using the FinBridge platform?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#fbHomeFaq">
+            <div class="accordion-body text-muted small">
+              FinBridge is completely free for consumers. We do not charge borrowers any service or comparison fee. Partner banks pay a referral fee upon successful product disbursal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. COMPREHENSIVE FOOTER
+       ========================================================================== -->
+  <footer class="fb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & Bio -->
+        <div class="col-lg-4">
+          <div class="fb-brand mb-3 text-white">
+            <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
+            <span>Fin<span class="highlight">Bridge</span></span>
+          </div>
+          <p class="small text-muted mb-4" style="line-height: 1.6;">
+            FinBridge is India's premier financial marketplace connecting individuals and enterprises with leading lenders, credit card issuers, and investment avenues.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="fb-icon-btn bg-dark text-white border-0"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fb-icon-btn bg-dark text-white border-0"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="fb-icon-btn bg-dark text-white border-0"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="fb-icon-btn bg-dark text-white border-0"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Financial Products -->
+        <div class="col-6 col-lg-2">
+          <h5>Products</h5>
+          <ul class="fb-footer-links">
+            <li><a href="personal-loans.html">Personal Loans</a></li>
+            <li><a href="business-loans.html">Business Loans</a></li>
+            <li><a href="personal-loans.html">Home Loans</a></li>
+            <li><a href="credit-cards.html">Credit Cards</a></li>
+            <li><a href="insurance.html">Health Insurance</a></li>
+            <li><a href="investments.html">Mutual Funds & SIP</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Smart Tools -->
+        <div class="col-6 col-lg-2">
+          <h5>Financial Tools</h5>
+          <ul class="fb-footer-links">
+            <li><a href="bank-statement.html">Statement Analyzer</a></li>
+            <li><a href="emi-calculator.html">Loan EMI Calculator</a></li>
+            <li><a href="sip-calculator.html">SIP Calculator</a></li>
+            <li><a href="fd-calculator.html">FD Calculator</a></li>
+            <li><a href="credit-score.html">Free Credit Score</a></li>
+            <li><a href="calculators.html">All Calculators</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Admin -->
+        <div class="col-6 col-lg-2">
+          <h5>Portals</h5>
+          <ul class="fb-footer-links">
+            <li><a href="dashboard/index.html"><i class="bi bi-person-circle me-1"></i> Customer Dashboard</a></li>
+            <li><a href="dashboard/applications.html">Track Applications</a></li>
+            <li><a href="dashboard/documents.html">Document Locker</a></li>
+            <li><a href="admin/index.html"><i class="bi bi-speedometer me-1 text-warning"></i> Admin Portal (CRUD)</a></li>
+            <li><a href="login.html">Login / Register</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Company & Support -->
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="fb-footer-links">
+            <li><a href="about.html">About FinBridge</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blog.html">Financial Guides</a></li>
+            <li><a href="faq.html">Help & FAQs</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Demo Disclaimer Box -->
+      <div class="fb-footer-disclaimer">
+        <strong>Demo Presentation Disclaimer:</strong> FinBridge is an interactive frontend demo and technology showcase. Loan amounts, interest rates, credit score estimations, and lender brand logos (FinTrust, Unity Finance, Capital Plus, QuickLoan) are fictional or illustrative sample records for UI/UX demonstration purposes. No real bank accounts or credit bureaus are accessed. Bank statement parsing occurs entirely client-side in your web browser.
+      </div>
+
+      <div class="fb-footer-bottom">
+        <div>© 2026 FinBridge Technologies Private Limited. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-muted">Security</a>
+          <a href="about.html" class="text-muted">Grievance Redressal</a>
+          <a href="about.html" class="text-muted">RBI Compliance Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Bootstrap 5, Chart.js, Main.js, Statement Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/statement-analyzer.js"></script>
+</body>
+</html>
+

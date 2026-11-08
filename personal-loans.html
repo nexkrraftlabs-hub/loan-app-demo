@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Loans Marketplace — FinBridge</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="fb-top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a href="tel:18001234567"><i class="bi bi-telephone-fill"></i> 1800-123-4567 (Toll Free)</a>
+        <span class="divider"></span>
+        <a href="faq.html">Help Center</a>
+        <span class="divider"></span>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="d-flex align-items-center" id="fb-top-auth-container">
+        <a href="login.html">Login</a>
+        <span class="divider"></span>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="fb-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fb-brand" href="index.html">
+        <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
+        <span>Fin<span class="highlight">Bridge</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fbNavbarMain">
+        <i class="bi bi-list fs-2 text-navy"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="fbNavbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fb-nav-link active" href="personal-loans.html">Personal Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="business-loans.html">Business Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-cards.html">Credit Cards</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-score.html">Credit Score</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="insurance.html">Insurance</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="investments.html">Investments</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="bank-statement.html">Statement Analyzer</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="calculators.html">Financial Tools</a></li>
+        </ul>
+
+        <div class="fb-nav-actions" id="fb-auth-nav-container">
+          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="fb-btn-outline-dark d-none d-sm-inline-flex">Login</a>
+          <button class="fb-btn-primary" onclick="openApplyModal('FinBridge Lenders', 'Personal Loan', 500000)">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Personal Loans</li>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <h2 class="fw-bold text-navy mb-1">Compare Personal Loans in India (2026)</h2>
+          <p class="text-muted small mb-0">Interest rates starting from 10.49% p.a. • Instant paperless digital approvals</p>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="emi-calculator.html" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-calculator me-1"></i> Calculate EMI
+          </a>
+          <button class="btn btn-sm fb-btn-primary" onclick="openApplyModal('FinTrust Bank', 'Personal Loan', 500000)">
+            Check Pre-Approved Limits
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Marketplace Layout -->
+  <main class="container py-5">
+    <div class="row g-4">
+      
+      <!-- Filter Sidebar -->
+      <div class="col-lg-3">
+        <div class="card border shadow-sm p-4 sticky-top" style="top: 90px; border-radius: 14px;">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold text-navy mb-0"><i class="bi bi-funnel me-1"></i> Filters</h5>
+            <button class="btn btn-sm btn-link text-muted p-0" onclick="resetLoanFilters()">Reset All</button>
+          </div>
+
+          <!-- Loan Amount Slider -->
+          <div class="mb-4">
+            <label class="fb-form-label d-flex justify-content-between">
+              <span>Required Amount</span>
+              <span class="text-success fw-bold" id="filterAmountDisplay">₹ 5,00,000</span>
+            </label>
+            <input type="range" class="form-range" id="loanAmountFilter" min="50000" max="4000000" step="50000" value="500000" oninput="applyLoanFilters()">
+            <div class="d-flex justify-content-between text-muted" style="font-size:0.75rem;">
+              <span>₹50K</span>
+              <span>₹40 Lakhs</span>
+            </div>
+          </div>
+
+          <!-- Employment Type -->
+          <div class="mb-4">
+            <label class="fb-form-label">Employment Type</label>
+            <select class="form-select form-select-sm" id="loanEmpFilter" onchange="applyLoanFilters()">
+              <option value="ALL">All Employment Types</option>
+              <option value="salaried" selected>Salaried (MNC / Pvt Ltd)</option>
+              <option value="self">Self-Employed Professional</option>
+              <option value="business">Business Owner</option>
+            </select>
+          </div>
+
+          <!-- Max Interest Rate -->
+          <div class="mb-4">
+            <label class="fb-form-label">Max Interest Rate</label>
+            <select class="form-select form-select-sm" id="loanRateFilter" onchange="applyLoanFilters()">
+              <option value="ALL">Any Rate</option>
+              <option value="11">Up to 11.00% p.a.</option>
+              <option value="12">Up to 12.00% p.a.</option>
+              <option value="14">Up to 14.00% p.a.</option>
+            </select>
+          </div>
+
+          <!-- Loan Tenure -->
+          <div class="mb-4">
+            <label class="fb-form-label">Tenure</label>
+            <div class="d-flex flex-wrap gap-2">
+              <input type="radio" class="btn-check" name="tenureRadio" id="t1" value="1" onchange="applyLoanFilters()">
+              <label class="btn btn-sm btn-outline-secondary" for="t1">1 Yr</label>
+              <input type="radio" class="btn-check" name="tenureRadio" id="t3" value="3" onchange="applyLoanFilters()">
+              <label class="btn btn-sm btn-outline-secondary" for="t3">3 Yrs</label>
+              <input type="radio" class="btn-check" name="tenureRadio" id="t5" value="5" checked onchange="applyLoanFilters()">
+              <label class="btn btn-sm btn-outline-secondary" for="t5">5 Yrs</label>
+            </div>
+          </div>
+
+          <div class="alert alert-info py-2 px-3 small border-0 mb-0">
+            <i class="bi bi-info-circle me-1"></i> Pre-screened lenders offering instant in-principle digital sanctions.
+          </div>
+        </div>
+      </div>
+
+      <!-- Loan Products List -->
+      <div class="col-lg-9">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted small" id="loanCountLabel">Showing <strong>5 loan products</strong> matching your criteria</span>
+          <div class="d-flex align-items-center gap-2">
+            <span class="small text-muted">Sort By:</span>
+            <select class="form-select form-select-sm" style="width: auto;" id="loanSortBy" onchange="applyLoanFilters()">
+              <option value="rate_low">Lowest Interest Rate</option>
+              <option value="amount_high">Highest Loan Amount</option>
+              <option value="fee_low">Lowest Processing Fee</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="loanCardsContainer" class="d-flex flex-column gap-3">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fb-footer">
+    <div class="container text-center text-muted small">
+      <p>© 2026 FinBridge Technologies Private Limited. Demo Presentation Mode.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    const allLoans = [
+      {
+        id: 'ln-fintrust',
+        name: 'Prime Personal Loan',
+        lender: 'FinTrust Bank',
+        logo: 'assets/images/lender-fintrust.png',
+        rate: 10.49,
+        rateStr: '10.49% – 16.99%',
+        maxAmount: 4000000,
+        fee: 'Up to 2.5%',
+        tenureMonths: 60,
+        tags: ['Lowest Rate', 'Quick Disbursal']
+      },
+      {
+        id: 'ln-unity',
+        name: 'Instant Cash Loan',
+        lender: 'Unity Finance',
+        logo: 'assets/images/lender-unity.png',
+        rate: 10.75,
+        rateStr: '10.75% – 17.50%',
+        maxAmount: 4000000,
+        fee: 'Up to 2.0%',
+        tenureMonths: 60,
+        tags: ['Paperless KYC', 'Disbursal in 2 Hrs']
+      },
+      {
+        id: 'ln-capital',
+        name: 'Flexi Growth Loan',
+        lender: 'Capital Plus',
+        logo: 'assets/images/lender-capital.png',
+        rate: 11.00,
+        rateStr: '11.00% – 18.00%',
+        maxAmount: 4000000,
+        fee: 'Up to 2.5%',
+        tenureMonths: 60,
+        tags: ['Part-Payment Allowed']
+      },
+      {
+        id: 'ln-quick',
+        name: 'Express Personal Loan',
+        lender: 'QuickLoan',
+        logo: 'assets/images/lender-quick.png',
+        rate: 10.99,
+        rateStr: '10.99% – 17.25%',
+        maxAmount: 4000000,
+        fee: 'Up to 2.25%',
+        tenureMonths: 60,
+        tags: ['Zero Physical Docs']
+      },
+      {
+        id: 'ln-hdfc',
+        name: 'HDFC Salaried Personal Loan',
+        lender: 'HDFC Bank',
+        logo: 'assets/images/lender-fintrust.png',
+        rate: 10.50,
+        rateStr: '10.50% – 15.00%',
+        maxAmount: 5000000,
+        fee: 'Up to 1.5%',
+        tenureMonths: 60,
+        tags: ['Top Tier Bank', 'Instant Netbanking Sanction']
+      }
+    ];
+
+    function applyLoanFilters() {
+      const amount = parseInt(document.getElementById('loanAmountFilter').value, 10);
+      document.getElementById('filterAmountDisplay').textContent = '₹ ' + amount.toLocaleString('en-IN');
+      const maxRate = document.getElementById('loanRateFilter').value;
+      const sortBy = document.getElementById('loanSortBy').value;
+
+      let filtered = allLoans.filter(l => {
+        if (maxRate !== 'ALL' && l.rate > parseFloat(maxRate)) return false;
+        return true;
+      });
+
+      if (sortBy === 'rate_low') filtered.sort((a, b) => a.rate - b.rate);
+      if (sortBy === 'amount_high') filtered.sort((a, b) => b.maxAmount - a.maxAmount);
+
+      renderLoanCards(filtered, amount);
+    }
+
+    function renderLoanCards(loans, reqAmount) {
+      const container = document.getElementById('loanCardsContainer');
+      document.getElementById('loanCountLabel').innerHTML = `Showing <strong>${loans.length} loan offers</strong>`;
+
+      if (!loans.length) {
+        container.innerHTML = `<div class="card p-5 text-center text-muted">No lenders match the selected interest rate filter. Please adjust your criteria.</div>`;
+        return;
+      }
+
+      container.innerHTML = loans.map(l => {
+        // Calculate estimated EMI for reqAmount over 5 years (60 months)
+        const r = (l.rate / 12) / 100;
+        const n = 60;
+        const emi = Math.round((reqAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
+
+        return `
+          <div class="card border shadow-sm p-4" style="border-radius:14px;">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="${l.logo}" alt="${l.lender}" style="width:36px; height:36px; object-fit:contain;" class="rounded">
+                <div>
+                  <h5 class="fw-bold text-navy mb-0">${l.name}</h5>
+                  <span class="small text-muted">${l.lender}</span>
+                </div>
+              </div>
+              <div class="d-flex gap-1">
+                ${l.tags.map(t => `<span class="badge bg-success-subtle text-success border border-success-subtle">${t}</span>`).join('')}
+              </div>
+            </div>
+
+            <div class="row g-3 text-center bg-light p-3 rounded-3 mb-3">
+              <div class="col-6 col-md-3">
+                <small class="text-muted d-block text-uppercase" style="font-size:0.7rem;">Interest Rate</small>
+                <strong class="text-success fs-6">${l.rateStr}</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <small class="text-muted d-block text-uppercase" style="font-size:0.7rem;">Max Loan Limit</small>
+                <strong class="text-navy fs-6">₹ ${(l.maxAmount / 100000).toFixed(0)} Lakhs</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <small class="text-muted d-block text-uppercase" style="font-size:0.7rem;">Estimated EMI</small>
+                <strong class="text-navy fs-6">₹ ${emi.toLocaleString('en-IN')}/mo</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <small class="text-muted d-block text-uppercase" style="font-size:0.7rem;">Processing Fee</small>
+                <strong class="text-navy fs-6">${l.fee}</strong>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div class="small text-muted">
+                <i class="bi bi-clock-history text-success me-1"></i> Indicative Disbursal: <strong>2 - 24 Hours</strong>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-dark" onclick="toggleCompare('${l.id}', '${l.name}', 'Personal Loan', '${l.lender}', '${l.rate}% p.a.', '${l.fee}')">
+                  <i class="bi bi-arrow-left-right me-1"></i> Compare
+                </button>
+                <button class="fb-btn-primary btn-sm" onclick="openApplyModal('${l.lender}', '${l.name}', ${reqAmount})">
+                  Apply Now <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function resetLoanFilters() {
+      document.getElementById('loanAmountFilter').value = 500000;
+      document.getElementById('loanRateFilter').value = 'ALL';
+      document.getElementById('loanEmpFilter').value = 'salaried';
+      applyLoanFilters();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLoanFilters();
+    });
+  </script>
+</body>
+</html>
+

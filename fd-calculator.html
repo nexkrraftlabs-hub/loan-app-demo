@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Deposit (FD) Calculator — FinBridge</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="fb-top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a href="tel:18001234567"><i class="bi bi-telephone-fill"></i> 1800-123-4567 (Toll Free)</a>
+        <span class="divider"></span>
+        <a href="faq.html">Help Center</a>
+        <span class="divider"></span>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="d-flex align-items-center" id="fb-top-auth-container">
+        <a href="login.html">Login</a>
+        <span class="divider"></span>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fb-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fb-brand" href="index.html">
+        <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
+        <span>Fin<span class="highlight">Bridge</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fbNavbarMain">
+        <i class="bi bi-list fs-2 text-navy"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="fbNavbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="personal-loans.html">Personal Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="business-loans.html">Business Loans</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-cards.html">Credit Cards</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-score.html">Credit Score</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="insurance.html">Insurance</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="investments.html">Investments</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="bank-statement.html">Statement Analyzer</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link active" href="calculators.html">Financial Tools</a></li>
+        </ul>
+
+        <div class="fb-nav-actions" id="fb-auth-nav-container">
+          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="fb-btn-outline-dark d-none d-sm-inline-flex">Login</a>
+          <a href="investments.html" class="fb-btn-primary">High-Yield FDs</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="calculators.html">Calculators</a></li>
+          <li class="breadcrumb-item active" aria-current="page">FD Calculator</li>
+        </ol>
+      </nav>
+      <h2 class="fw-bold text-navy mb-1">Fixed Deposit (FD) Calculator</h2>
+      <p class="text-muted small mb-0">Calculate quarterly compounding returns and maturity values on bank term deposits</p>
+    </div>
+  </section>
+
+  <!-- Main Calculator -->
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card border shadow-sm p-4 h-100" style="border-radius:16px;">
+          <h4 class="fw-bold text-navy mb-4">Deposit Parameters</h4>
+
+          <!-- 1. Principal -->
+          <div class="mb-4">
+            <div class="fb-slider-val-box">
+              <span class="fb-form-label">Total Deposit Amount</span>
+              <div class="input-group input-group-sm" style="max-width: 170px;">
+                <span class="input-group-text bg-white">₹</span>
+                <input type="number" id="fdAmountInput" class="form-control fw-bold text-navy text-end" value="200000" min="10000" max="5000000" step="10000">
+              </div>
+            </div>
+            <input type="range" class="form-range fb-range-slider" id="fdAmountSlider" min="10000" max="2500000" step="10000" value="200000">
+            <div class="d-flex justify-content-between text-muted" style="font-size:0.75rem;">
+              <span>₹ 10,000</span>
+              <span>₹ 25 Lakhs</span>
+            </div>
+          </div>
+
+          <!-- 2. Rate -->
+          <div class="mb-4">
+            <div class="fb-slider-val-box">
+              <span class="fb-form-label">Annual Interest Rate</span>
+              <div class="input-group input-group-sm" style="max-width: 130px;">
+                <input type="number" id="fdRateInput" class="form-control fw-bold text-navy text-end" value="7.25" min="3" max="12" step="0.05">
+                <span class="input-group-text bg-white">% p.a.</span>
+              </div>
+            </div>
+            <input type="range" class="form-range fb-range-slider" id="fdRateSlider" min="3" max="12" step="0.05" value="7.25">
+            <div class="d-flex justify-content-between text-muted" style="font-size:0.75rem;">
+              <span>3%</span>
+              <span>12%</span>
+            </div>
+          </div>
+
+          <!-- 3. Tenure -->
+          <div class="mb-4">
+            <div class="fb-slider-val-box">
+              <span class="fb-form-label">Tenure (Years)</span>
+              <div class="input-group input-group-sm" style="max-width: 130px;">
+                <input type="number" id="fdTenureInput" class="form-control fw-bold text-navy text-end" value="3" min="1" max="10">
+                <span class="input-group-text bg-white">Years</span>
+              </div>
+            </div>
+            <input type="range" class="form-range fb-range-slider" id="fdTenureSlider" min="1" max="10" step="1" value="3">
+            <div class="d-flex justify-content-between text-muted" style="font-size:0.75rem;">
+              <span>1 Year</span>
+              <span>10 Years</span>
+            </div>
+          </div>
+
+          <div class="mt-auto pt-3 border-top">
+            <button class="fb-btn-primary w-100" onclick="openApplyModal('Unity Small Finance Bank', 'Fixed Deposit @ 9.0% p.a.', document.getElementById('fdAmountSlider').value)">
+              Book High Yield FD @ Up to 9.00% <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card border shadow-sm p-4 h-100" style="border-radius:16px;">
+          <h5 class="fw-bold text-navy mb-3">Maturity Returns</h5>
+
+          <div class="p-3 bg-light rounded-3 border text-center mb-3">
+            <span class="text-muted small text-uppercase fw-bold d-block">Total Maturity Value</span>
+            <span class="display-6 fw-bold text-success" id="fdMaturityVal">₹ 2,47,951</span>
+          </div>
+
+          <div class="p-3 border rounded-3 bg-white small mb-3">
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted">Principal Deposit:</span>
+              <strong class="text-navy" id="fdInvestedVal">₹ 2,00,000</strong>
+            </div>
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-success fw-bold">Total Interest Earned:</span>
+              <strong class="text-success" id="fdInterestVal">₹ 47,951</strong>
+            </div>
+            <div class="d-flex justify-content-between py-2">
+              <span class="text-muted">Compounding Frequency:</span>
+              <strong>Quarterly (Standard Bank Rule)</strong>
+            </div>
+          </div>
+
+          <div class="alert alert-secondary py-2 small mb-0">
+            <i class="bi bi-shield-lock me-1"></i> Principal and accrued interest insured up to ₹5 Lakhs by DICGC (RBI subsidiary).
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fb-footer">
+    <div class="container text-center text-muted small">
+      <p>© 2026 FinBridge Technologies Private Limited. Demo Presentation Mode.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculators.js"></script>
+</body>
+</html>
+

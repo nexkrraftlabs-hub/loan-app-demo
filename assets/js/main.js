@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initSearch();
   initDiscoveryTabs();
+  initHeroLoanCarousel();
   initComparisonTray();
   initAuthUI();
   initGlobalModals();
@@ -113,6 +114,62 @@ function initDiscoveryTabs() {
       }
     });
   });
+}
+
+function initHeroLoanCarousel() {
+  const carousel = document.querySelector('.fb-loan-carousel');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('[data-loan-slide]'));
+  const dots = Array.from(carousel.querySelectorAll('[data-loan-dot]'));
+  const previous = carousel.querySelector('[data-loan-prev]');
+  const next = carousel.querySelector('[data-loan-next]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let activeIndex = 0;
+  let timer;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const active = slideIndex === activeIndex;
+      slide.classList.toggle('active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+      slide.toggleAttribute('inert', !active);
+      dots[slideIndex]?.classList.toggle('active', active);
+      dots[slideIndex]?.setAttribute('aria-current', String(active));
+    });
+  };
+
+  const stopAutoplay = () => window.clearInterval(timer);
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (!reducedMotion.matches && !document.hidden && !carousel.matches(':hover, :focus-within')) {
+      timer = window.setInterval(() => showSlide(activeIndex + 1), 5500);
+    }
+  };
+
+  previous?.addEventListener('click', () => {
+    showSlide(activeIndex - 1);
+    startAutoplay();
+  });
+  next?.addEventListener('click', () => {
+    showSlide(activeIndex + 1);
+    startAutoplay();
+  });
+  dots.forEach((dot, index) => dot.addEventListener('click', () => {
+    showSlide(index);
+    startAutoplay();
+  }));
+
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', (event) => {
+    if (!carousel.contains(event.relatedTarget)) startAutoplay();
+  });
+  document.addEventListener('visibilitychange', startAutoplay);
+  reducedMotion.addEventListener?.('change', startAutoplay);
+  startAutoplay();
 }
 
 // Check Offers Form Handler

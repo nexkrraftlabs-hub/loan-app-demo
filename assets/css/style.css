@@ -421,31 +421,150 @@ a:hover {
   line-height: 1.3;
 }
 
-/* Hero Center Person Graphic */
-.fb-hero-person-wrap {
-  position: relative;
+/* Featured Loan Carousel */
+.fb-loan-carousel {
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.fb-loan-slide {
+  display: none;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #FFFFFF;
+}
+
+.fb-loan-slide.active {
+  display: block;
+  animation: fb-loan-slide-in 260ms ease-out;
+}
+
+.fb-loan-slide-link {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
   height: 100%;
+  min-height: 360px;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
 }
 
-.fb-hero-person-bg {
-  position: absolute;
-  width: 280px;
-  height: 280px;
+.fb-loan-slide-link:hover .fb-loan-slide-cta {
+  color: #087A5B;
+}
+
+.fb-loan-slide-art {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  padding: 12px 8px 0;
+  background: #EAF4EF;
+}
+
+.fb-loan-art-car {
+  background: #EAF2F7;
+}
+
+.fb-loan-art-business {
+  background: #F7F1E4;
+}
+
+.fb-loan-slide-art svg {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+}
+
+.fb-loan-slide-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 16px 16px;
+  color: var(--fb-text);
+}
+
+.fb-loan-slide-kicker {
+  color: #087A5B;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fb-loan-slide-copy h3 {
+  margin: 5px 0 6px;
+  color: var(--fb-primary);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.fb-loan-slide-copy p {
+  margin: 0 0 14px;
+  color: var(--fb-text-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.fb-loan-slide-cta {
+  margin-top: auto;
+  color: var(--fb-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.fb-loan-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px 0;
+}
+
+.fb-loan-carousel-arrow {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  background: radial-gradient(circle, #00A878 0%, rgba(0, 168, 120, 0.7) 100%);
-  bottom: 30px;
-  z-index: 1;
+  background: transparent;
+  color: #FFFFFF;
 }
 
-.fb-hero-person-img {
-  position: relative;
-  z-index: 2;
-  max-height: 420px;
-  object-fit: contain;
-  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
+.fb-loan-carousel-arrow:hover,
+.fb-loan-carousel-arrow:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.fb-loan-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.fb-loan-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.fb-loan-carousel-dots button.active {
+  width: 20px;
+  border-radius: 5px;
+  background: #00D094;
+}
+
+@keyframes fb-loan-slide-in {
+  from { opacity: 0.45; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero Quick Discovery Card */
@@ -1142,6 +1261,33 @@ a:hover {
   justify-content: center;
   color: #FFFFFF;
   font-size: 2.5rem;
+}
+
+.fb-blog-img.fb-blog-art-credit,
+.fb-blog-img.fb-blog-art-loan,
+.fb-blog-img.fb-blog-art-budget {
+  background: #EAF4EF;
+}
+
+.fb-blog-img.fb-blog-art-loan {
+  background: #EAF2F7;
+}
+
+.fb-blog-img.fb-blog-art-budget {
+  background: #F7F1E4;
+}
+
+.fb-blog-img svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-loan-slide.active {
+    animation: none;
+  }
 }
 
 .fb-blog-content {

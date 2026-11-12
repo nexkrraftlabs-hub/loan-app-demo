@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initDashSidebar();
   initSearch();
   initDiscoveryTabs();
   initHeroLoanCarousel();
@@ -12,6 +13,69 @@ document.addEventListener('DOMContentLoaded', () => {
   initAuthUI();
   initGlobalModals();
 });
+
+/* ==========================================================================
+   DASHBOARD / ADMIN MOBILE SIDEBAR
+   - injects a hamburger button on pages that don't have one
+   - shows a backdrop while the sidebar is open (works with the inline
+     onclick toggles too, via a class observer)
+   ========================================================================== */
+function initDashSidebar() {
+  const sidebar = document.querySelector('.fb-dash-sidebar');
+  if (!sidebar) return;
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'fb-dash-backdrop';
+  document.body.appendChild(backdrop);
+
+  const setOpen = (open) => sidebar.classList.toggle('show', open);
+  const isMobile = () => window.matchMedia('(max-width: 991.98px)').matches;
+
+  // Add a hamburger to the topbar if the page doesn't already have one
+  const topbar = document.querySelector('.fb-dash-topbar');
+  if (topbar && !topbar.querySelector('.bi-list')) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-sm btn-light border d-lg-none';
+    btn.setAttribute('aria-label', 'Open menu');
+    btn.innerHTML = '<i class="bi bi-list fs-5"></i>';
+    btn.addEventListener('click', () => setOpen(!sidebar.classList.contains('show')));
+
+    const first = topbar.firstElementChild;
+    const wrap = document.createElement('div');
+    wrap.className = 'd-flex align-items-center gap-3 min-w-0';
+    wrap.appendChild(btn);
+    if (first) wrap.appendChild(first);
+    topbar.insertBefore(wrap, topbar.firstChild);
+  }
+
+  // Add a close button inside the sidebar header if missing
+  const brand = sidebar.querySelector('.fb-dash-brand');
+  if (brand && !brand.querySelector('button')) {
+    const close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'btn btn-sm text-white d-lg-none';
+    close.setAttribute('aria-label', 'Close menu');
+    close.innerHTML = '<i class="bi bi-x-lg"></i>';
+    close.addEventListener('click', () => setOpen(false));
+    brand.appendChild(close);
+  }
+
+  // Keep backdrop + scroll lock in sync with the sidebar's "show" class
+  const sync = () => {
+    const open = sidebar.classList.contains('show') && isMobile();
+    backdrop.classList.toggle('show', open);
+    document.body.classList.toggle('fb-no-scroll', open);
+  };
+  new MutationObserver(sync).observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+
+  backdrop.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  sidebar.querySelectorAll('.fb-dash-menu-link').forEach(a =>
+    a.addEventListener('click', () => { if (isMobile()) setOpen(false); })
+  );
+  window.addEventListener('resize', () => { if (!isMobile()) setOpen(false); sync(); });
+}
 
 /* ==========================================================================
    NAVIGATION & MOBILE DRAWER

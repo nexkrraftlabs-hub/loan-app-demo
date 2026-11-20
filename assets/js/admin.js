@@ -262,10 +262,10 @@ function renderAdminUsersTable() {
   if (!tbody) return;
 
   const users = [
-    { name: 'Aditya Sharma', email: 'aditya.sharma@example.com', phone: '+91 98765 43210', city: 'New Delhi', score: 785, status: 'Active' },
-    { name: 'Pooja Verma', email: 'pooja.verma@example.com', phone: '+91 98111 22334', city: 'Mumbai', score: 760, status: 'Active' },
-    { name: 'Kunal Singhal', email: 'kunal.singhal@example.com', phone: '+91 97222 33445', city: 'Bengaluru', score: 720, status: 'Active' },
-    { name: 'Vikram Joshi', email: 'vikram.joshi@example.com', phone: '+91 96333 44556', city: 'Pune', score: 810, status: 'Active' }
+    { name: 'Aditya Sharma', email: 'aditya.sharma@example.com', phone: '+91 98765 43210', city: 'Lucknow', score: 785, status: 'Active' },
+    { name: 'Pooja Verma', email: 'pooja.verma@example.com', phone: '+91 98111 22334', city: 'Lucknow', score: 760, status: 'Active' },
+    { name: 'Kunal Singhal', email: 'kunal.singhal@example.com', phone: '+91 97222 33445', city: 'Kanpur', score: 720, status: 'Active' },
+    { name: 'Vikram Joshi', email: 'vikram.joshi@example.com', phone: '+91 96333 44556', city: 'Varanasi', score: 810, status: 'Active' }
   ];
 
   tbody.innerHTML = users.map(u => `

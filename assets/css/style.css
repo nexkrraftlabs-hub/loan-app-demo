@@ -7,13 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
-  --fb-primary: #142B4A;
-  --fb-navy-deep: #0B1D33;
-  --fb-navy-light: #1D3D63;
+  --fb-primary: #11355E;
+  --fb-navy-deep: #0A1F38;
+  --fb-navy-light: #1A4778;
   --fb-green: #00A878;
   --fb-green-hover: #008f66;
   --fb-green-light: #E8F7F1;
   --fb-green-subtle: #F0FAF6;
+  --srs-gold: #C6923B;
+  --srs-gold-hover: #AF7F2F;
+  --srs-gold-light: #FDF7EC;
+  --srs-gold-subtle: #FAF0DC;
   --fb-bg: #F5F7FA;
   --fb-card-bg: #FFFFFF;
   --fb-text: #192B40;
@@ -33,6 +37,73 @@
   --fb-shadow: 0 6px 20px rgba(11, 29, 51, 0.06);
   --fb-shadow-lg: 0 16px 36px rgba(11, 29, 51, 0.10);
   --fb-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animated Heading Icons (Move/Float/Pulse) */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+
+@keyframes swayIcon {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.heading-icon-float {
+  display: inline-block;
+  animation: floatIcon 2.8s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+.heading-icon-pulse {
+  display: inline-block;
+  animation: pulseIcon 2.2s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+.heading-icon-sway {
+  display: inline-block;
+  animation: swayIcon 3.2s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+/* SRS Logo Image */
+.srs-logo-img {
+  height: 48px;
+  max-width: 190px;
+  object-fit: contain;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.srs-logo-img:hover {
+  transform: scale(1.03);
+}
+
+.srs-logo-footer {
+  height: 54px;
+  max-width: 210px;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.text-gold {
+  color: var(--srs-gold) !important;
+}
+
+.bg-gold-subtle {
+  background-color: var(--srs-gold-light) !important;
+  color: var(--srs-gold-hover) !important;
 }
 
 /* Base Styles */

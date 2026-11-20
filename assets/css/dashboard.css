@@ -25,11 +25,20 @@
 }
 
 .fb-dash-brand {
-  padding: 20px 24px;
+  padding: 16px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.srs-logo-dash {
+  height: 42px;
+  max-width: 170px;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .fb-dash-menu {

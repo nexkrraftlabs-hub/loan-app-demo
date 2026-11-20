@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About FinBridge — Premium Fintech Marketplace</title>
+  <title>About SRS Financial Solutions — Empowering peoples with Smart Financial Solutions | Lucknow</title>
   
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Font Awesome 6 & Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -16,13 +21,21 @@
   <div class="fb-top-bar d-none d-md-block">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center">
-        <a href="tel:18001234567"><i class="bi bi-telephone-fill"></i> 1800-123-4567 (Toll Free)</a>
+        <a href="tel:+919452000000"><i class="fa-solid fa-phone me-1 text-warning"></i> +91 94520 00000 / 1800-123-4567</a>
         <span class="divider"></span>
-        <a href="faq.html">Help Center</a>
+        <span class="text-white-50"><i class="fa-solid fa-location-dot me-1 text-warning"></i> Gomti Nagar, Lucknow</span>
         <span class="divider"></span>
-        <a href="about.html" class="text-white">About Us</a>
+        <a href="https://www.linkedin.com/company/srs-financial-solutions" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin me-1 text-info"></i> LinkedIn (71+ Community)</a>
+        <span class="divider"></span>
+        <a href="about.html" class="text-white fw-bold">About Us</a>
+        <span class="divider"></span>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="d-flex align-items-center" id="fb-top-auth-container">
+        <a href="https://wa.me/919452000000" target="_blank" rel="noopener" class="text-success fw-bold">
+          <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Support
+        </a>
+        <span class="divider"></span>
         <a href="login.html">Login</a>
         <span class="divider"></span>
         <a href="register.html">Register</a>
@@ -33,30 +46,33 @@
   <!-- Navbar -->
   <nav class="fb-navbar navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand fb-brand" href="index.html">
-        <div class="fb-brand-icon"><i class="bi bi-layers-half"></i></div>
-        <span>Fin<span class="highlight">Bridge</span></span>
+      <a class="navbar-brand fb-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/logo.png" alt="SRS Financial Solutions" class="srs-logo-img">
+        <div class="d-flex flex-column">
+          <span class="fw-bold" style="font-size: 1.18rem; color: #11355E; line-height: 1.15; letter-spacing: -0.3px;">SRS <span style="color: #C6923B;">Financial</span></span>
+          <span class="text-muted" style="font-size: 0.68rem; letter-spacing: 0.8px; font-weight: 600;">SOLUTIONS</span>
+        </div>
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fbNavbarMain">
-        <i class="bi bi-list fs-2 text-navy"></i>
+        <i class="fa-solid fa-bars fs-2 text-navy"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="fbNavbarMain">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="business-loans.html"><i class="fa-solid fa-briefcase text-warning me-1"></i> Business Loans</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="personal-loans.html">Personal Loans</a></li>
-          <li class="nav-item"><a class="nav-link fb-nav-link" href="business-loans.html">Business Loans</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-cards.html">Credit Cards</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="credit-score.html">Credit Score</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="insurance.html">Insurance</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="investments.html">Investments</a></li>
           <li class="nav-item"><a class="nav-link fb-nav-link" href="bank-statement.html">Statement Analyzer</a></li>
-          <li class="nav-item"><a class="nav-link fb-nav-link" href="calculators.html">Financial Tools</a></li>
+          <li class="nav-item"><a class="nav-link fb-nav-link" href="calculators.html">Calculators</a></li>
         </ul>
 
         <div class="fb-nav-actions" id="fb-auth-nav-container">
-          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search"><i class="bi bi-search"></i></button>
+          <button class="fb-icon-btn" id="fb-nav-search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
           <a href="login.html" class="fb-btn-outline-dark d-none d-sm-inline-flex">Login</a>
-          <a href="personal-loans.html" class="fb-btn-primary">Explore Products</a>
+          <a href="business-loans.html" class="fb-btn-primary">Explore Loans</a>
         </div>
       </div>
     </div>
@@ -64,65 +80,372 @@
 
   <!-- Hero -->
   <section class="py-5 bg-white border-bottom">
-    <div class="container text-center" style="max-width: 820px;">
-      <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill fw-bold mb-2">
-        <i class="bi bi-award-fill me-1"></i> Trust, Precision & Transparency
+    <div class="container text-center" style="max-width: 880px;">
+      <span class="badge bg-gold-subtle text-gold border border-warning-subtle px-3 py-2 rounded-pill fw-bold mb-3 d-inline-flex align-items-center gap-2">
+        <i class="fa-solid fa-award heading-icon-pulse text-warning"></i> Founded 2025 • Lucknow, Uttar Pradesh
       </span>
-      <h1 class="display-6 fw-bold text-navy mb-3">Empowering Smarter Financial Decisions for India</h1>
-      <p class="text-muted lead">
-        FinBridge is a modern financial discovery platform built to eliminate friction, hidden costs and opacity from consumer banking, lending, and wealth management.
+      <h1 class="display-6 fw-bold text-navy mb-3">
+        <i class="fa-solid fa-building-columns heading-icon-float text-primary me-2"></i>
+        Empowering Peoples with Smart Financial Solutions
+      </h1>
+      <p class="text-muted lead" style="font-size: 1.15rem; line-height: 1.7;">
+        <strong>SRS Financial Solutions</strong> is a trusted financial services firm dedicated to helping businesses, SMEs, and entrepreneurs access the right funding solutions with ease, speed, and efficiency.
       </p>
     </div>
   </section>
 
-  <!-- Mission & Values -->
+  <!-- About Us In-Depth Content -->
   <main class="container py-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-      <div class="col">
-        <div class="card h-100 border p-4 shadow-sm" style="border-radius:14px;">
-          <div class="fb-product-icon-box icon-green mb-3"><i class="bi bi-bullseye"></i></div>
-          <h4 class="fw-bold text-navy mb-2">Unbiased Comparison</h4>
-          <p class="text-muted small">We prioritize borrower financial health over commission margins. Our algorithmic recommendations evaluate true APRs, hidden penalties and terms.</p>
+    
+    <!-- Company Overview & Snapshot Cards -->
+    <div class="row g-4 mb-5 align-items-center">
+      <div class="col-lg-7">
+        <h3 class="fw-bold text-navy mb-3">
+          <i class="fa-solid fa-chart-line heading-icon-float text-success me-2"></i>
+          About SRS Financial Solutions
+        </h3>
+        <p class="text-muted" style="line-height: 1.8;">
+          At <strong>SRS Financial Solutions</strong>, we understand that capital is the lifeblood of business growth. Headquartered at Avanta Tower in Gomti Nagar, Lucknow, our firm was founded in 2025 to bridge the gap between ambitious enterprises and premier institutional lenders.
+        </p>
+        <p class="text-muted" style="line-height: 1.8;">
+          With a strong and expanding network of top-tier private banks, public sector banks, and leading NBFCs, we ensure <strong>fast processing, competitive interest rates, and high approval chances</strong> for our clients across Uttar Pradesh and throughout India.
+        </p>
+        <div class="p-3 bg-light rounded-3 border-start border-4 border-warning my-3">
+          <div class="fst-italic text-navy fw-semibold">
+            "Our mission is to empower SMEs and entrepreneurs by providing seamless access to capital, enabling them to scale and succeed."
+          </div>
         </div>
+        <p class="text-muted mb-0">
+          📞 <strong>Get in touch with us</strong> today to unlock the right financial opportunities for your business.
+        </p>
       </div>
 
-      <div class="col">
-        <div class="card h-100 border p-4 shadow-sm" style="border-radius:14px;">
-          <div class="fb-product-icon-box icon-blue mb-3"><i class="bi bi-shield-lock"></i></div>
-          <h4 class="fw-bold text-navy mb-2">Privacy-First Architecture</h4>
-          <p class="text-muted small">Your sensitive financial documents and statements are parsed locally on your device sandbox. We never harvest or sell consumer transaction data.</p>
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-lg p-4" style="border-radius: 18px; background: linear-gradient(145deg, #11355E, #1A4676); color: #fff;">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="bg-white p-2 rounded-3">
+              <img src="assets/images/logo.png" alt="SRS Financial Solutions" style="height: 52px; width: auto;">
+            </div>
+            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill">Corporate Profile</span>
+          </div>
+          <h4 class="fw-bold text-white mb-3">Company Fast Facts</h4>
+          <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2.1;">
+            <li><strong class="text-white"><i class="fa-solid fa-industry text-warning me-2"></i>Industry:</strong> Financial Services</li>
+            <li><strong class="text-white"><i class="fa-solid fa-users text-info me-2"></i>Company Size:</strong> 2–10 Employees</li>
+            <li><strong class="text-white"><i class="fa-solid fa-handshake text-success me-2"></i>Entity Type:</strong> Partnership Firm</li>
+            <li><strong class="text-white"><i class="fa-solid fa-calendar-check text-warning me-2"></i>Founded:</strong> 2025</li>
+            <li><strong class="text-white"><i class="fa-solid fa-location-dot text-danger me-2"></i>Headquarters:</strong> Lucknow, Uttar Pradesh</li>
+            <li><strong class="text-white"><i class="fa-brands fa-linkedin text-info me-2"></i>LinkedIn Network:</strong> 71+ Followers</li>
+          </ul>
+          <div class="pt-2 border-top border-white-50 d-flex gap-2">
+            <a href="contact.html" class="btn btn-warning fw-bold btn-sm text-dark flex-grow-1">Contact Office</a>
+            <a href="https://www.linkedin.com/company/srs-financial-solutions" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="col">
-        <div class="card h-100 border p-4 shadow-sm" style="border-radius:14px;">
-          <div class="fb-product-icon-box icon-yellow mb-3"><i class="bi bi-lightning-charge"></i></div>
-          <h4 class="fw-bold text-navy mb-2">End-to-End Digital Flow</h4>
-          <p class="text-muted small">From soft pre-qualification to digital KYC verification and disbursement tracking, FinBridge eliminates paper friction entirely.</p>
+    <!-- Core Specializations -->
+    <div class="my-5">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill fw-bold mb-2">Our Expertise</span>
+        <h2 class="display-6 fw-bold text-navy">
+          <i class="fa-solid fa-briefcase heading-icon-pulse text-warning me-2"></i>
+          What We Specialize In
+        </h2>
+        <p class="text-muted">Tailored lending instruments engineered to meet enterprise capital demands</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- 1 -->
+        <div class="col">
+          <div class="card h-100 border p-4 shadow-sm" style="border-radius:16px;">
+            <div class="fb-dropdown-icon icon-yellow mb-3 fs-4"><i class="fa-solid fa-shield-halved heading-icon-float"></i></div>
+            <h4 class="fw-bold text-navy mb-2">✔ Unsecured Business Loans</h4>
+            <p class="text-muted small">Collateral-free business credit tailored for rapid capital infusion, operational expansion, and working liquidity with zero property pledging.</p>
+            <ul class="text-muted small ps-3">
+              <li>High loan sanctions up to ₹75 Lakhs</li>
+              <li>Minimal documentation & fast approvals</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col">
+          <div class="card h-100 border p-4 shadow-sm" style="border-radius:16px;">
+            <div class="fb-dropdown-icon icon-green mb-3 fs-4"><i class="fa-solid fa-arrows-spin heading-icon-pulse"></i></div>
+            <h4 class="fw-bold text-navy mb-2">✔ Working Capital & OD Limits</h4>
+            <p class="text-muted small">Overdraft (OD) facilities and cash credit (CC) limits to navigate inventory cycles, vendor payables, and day-to-day liquidity effortlessly.</p>
+            <ul class="text-muted small ps-3">
+              <li>Pay interest only on utilized capital</li>
+              <li>Seamless monthly revolving balance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col">
+          <div class="card h-100 border p-4 shadow-sm" style="border-radius:16px;">
+            <div class="fb-dropdown-icon icon-blue mb-3 fs-4"><i class="fa-solid fa-building-columns heading-icon-sway"></i></div>
+            <h4 class="fw-bold text-navy mb-2">✔ Term Loans</h4>
+            <p class="text-muted small">Structured medium and long-term loans for machinery acquisition, commercial real estate, unit setup, and infrastructural enhancement.</p>
+            <ul class="text-muted small ps-3">
+              <li>Tenures extending up to 7 years</li>
+              <li>Competitive reduced interest rates</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col">
+          <div class="card h-100 border p-4 shadow-sm" style="border-radius:16px;">
+            <div class="fb-dropdown-icon icon-purple mb-3 fs-4"><i class="fa-solid fa-network-wired heading-icon-pulse"></i></div>
+            <h4 class="fw-bold text-navy mb-2">✔ Channel Financing</h4>
+            <p class="text-muted small">Specialized credit solutions designed for distributors, dealers, and suppliers to bridge invoice cycles and maintain smooth supply chain workflows.</p>
+            <ul class="text-muted small ps-3">
+              <li>Early supplier invoice discounting</li>
+              <li>Strengthen buyer-supplier trust</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-8">
+          <div class="card h-100 border p-4 shadow-sm" style="border-radius:16px; background: #FAFDFB;">
+            <div class="fb-dropdown-icon icon-green mb-3 fs-4"><i class="fa-solid fa-hand-holding-dollar heading-icon-float"></i></div>
+            <h4 class="fw-bold text-navy mb-2">✔ Customized Loan Solutions through Multiple Lenders</h4>
+            <p class="text-muted small">We don't believe in one-size-fits-all. We structure multi-lender syndication and tailored underwriting by leveraging our expansive consortium of banks and NBFCs to ensure the highest approval rates and ideal terms for your specific profile.</p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <span class="badge bg-light text-dark border"><i class="fa-solid fa-check text-success me-1"></i>Pre-qualified Matchmaking</span>
+              <span class="badge bg-light text-dark border"><i class="fa-solid fa-check text-success me-1"></i>Lowest Effective APR</span>
+              <span class="badge bg-light text-dark border"><i class="fa-solid fa-check text-success me-1"></i>Fast-Track Sanctions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="my-5 p-5 bg-white border rounded-4 shadow-sm" id="values">
+      <div class="text-center mb-5">
+        <span class="badge bg-warning-subtle text-warning border border-warning-subtle px-3 py-1 rounded-pill fw-bold mb-2">Our Foundation</span>
+        <h2 class="display-6 fw-bold text-navy">
+          <i class="fa-solid fa-heart-pulse heading-icon-pulse text-danger me-2"></i>
+          What We Believe In
+        </h2>
+        <p class="text-muted">The core pillars guiding every client interaction and lending partnership</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="text-center p-3">
+            <div class="rounded-circle bg-primary-subtle text-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; font-size: 1.8rem;">
+              <i class="fa-solid fa-eye heading-icon-float"></i>
+            </div>
+            <h4 class="fw-bold text-navy mb-2">🔹 Transparency</h4>
+            <p class="text-muted small">No hidden fees, no opaque terms, and no unexpected surprises. We provide clear comparisons, transparent fee breakdowns, and candid guidance at every step.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center p-3">
+            <div class="rounded-circle bg-success-subtle text-success d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; font-size: 1.8rem;">
+              <i class="fa-solid fa-bolt heading-icon-pulse"></i>
+            </div>
+            <h4 class="fw-bold text-navy mb-2">🔹 Speed</h4>
+            <p class="text-muted small">Business opportunities don't wait for paperwork. Our technology-driven processes and strong relationship management ensure swift turnaround and direct disbursements.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center p-3">
+            <div class="rounded-circle bg-warning-subtle text-warning d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; font-size: 1.8rem;">
+              <i class="fa-solid fa-handshake-angle heading-icon-sway"></i>
+            </div>
+            <h4 class="fw-bold text-navy mb-2">🔹 Client-Centric Approach</h4>
+            <p class="text-muted small">Your growth is our victory. We take the time to understand your unique business requirements and craft custom financial solutions that support your long-term success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Office Location Card -->
+    <div class="my-5 p-4 p-md-5 rounded-4 border bg-light shadow-sm">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-1 rounded-pill fw-bold mb-2">
+            <i class="fa-solid fa-location-dot me-1"></i> Primary Headquarters
+          </span>
+          <h3 class="fw-bold text-navy mb-2">
+            <i class="fa-solid fa-map-location-dot heading-icon-float text-primary me-2"></i>
+            Visit Us in Lucknow
+          </h3>
+          <p class="text-muted mb-3" style="line-height: 1.7;">
+            Conveniently situated in the corporate hub of Gomti Nagar, Lucknow:
+          </p>
+          <div class="p-3 bg-white rounded-3 border mb-3">
+            <strong class="text-navy d-block mb-1">SRS Financial Solutions</strong>
+            <div class="text-muted small">
+              1st Floor D90, Avanta Tower, Vibhuti Khand, Gomti Nagar,<br>
+              Lucknow, Uttar Pradesh 226010, IN
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://www.bing.com/maps?where=1st+Floor+D90%2CAvanta+Tower%2CVibhuti+khand%2CGomti+Nagar+Lucknow+226010+Uttar+Pradesh+IN&trk=org-locations_url" target="_blank" rel="noopener" class="btn btn-warning text-dark fw-bold">
+              <i class="fa-solid fa-diamond-turn-right me-1"></i> Get Directions (Bing Maps)
+            </a>
+            <a href="contact.html" class="btn btn-outline-dark">
+              <i class="fa-solid fa-envelope me-1"></i> Contact Desk
+            </a>
+            <a href="https://www.linkedin.com/company/srs-financial-solutions" target="_blank" rel="noopener" class="btn btn-outline-primary">
+              <i class="fa-brands fa-linkedin me-1"></i> Follow on LinkedIn (71+)
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div class="p-4 bg-white rounded-4 border shadow-sm">
+            <img src="assets/images/logo.png" alt="SRS Financial Solutions" class="img-fluid mb-3" style="max-height: 120px;">
+            <h5 class="fw-bold text-navy mb-1">SRS Financial Solutions</h5>
+            <div class="text-warning small fw-bold mb-3">Partnership Firm • Est. 2025</div>
+            <div class="small text-muted mb-3">Dedicated to SME & Commercial Growth</div>
+            <a href="tel:+919452000000" class="btn btn-sm btn-outline-success w-100 mb-2">
+              <i class="fa-solid fa-phone me-1"></i> Call +91 94520 00000
+            </a>
+            <a href="https://wa.me/919452000000" target="_blank" rel="noopener" class="btn btn-sm btn-success w-100">
+              <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Helpline
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Privacy & Terms Sections -->
     <div class="card border shadow-sm p-4 mb-4" id="privacy" style="border-radius:16px;">
-      <h4 class="fw-bold text-navy mb-3"><i class="bi bi-file-earmark-lock text-success me-2"></i>Privacy & Data Protection Policy</h4>
+      <h4 class="fw-bold text-navy mb-3"><i class="fa-solid fa-shield-halved text-success me-2 heading-icon-pulse"></i>Privacy & Data Protection Policy</h4>
       <p class="text-muted small">
-        FinBridge operates under strict privacy safeguards. This technology demonstration processes bank statements (PDF, CSV, Excel) strictly in local client browser memory without transmitting statement text to remote servers. No third-party data tracking or credit bureau reporting occurs during simulation.
+        SRS Financial Solutions operates under strict confidentiality protocols. Client information submitted through our interactive portals, statement analyzers, and loan eligibility checks is handled securely with banking-grade encryption. We never sell customer data to third-party telemarketers.
       </p>
     </div>
 
     <div class="card border shadow-sm p-4" id="terms" style="border-radius:16px;">
-      <h4 class="fw-bold text-navy mb-3"><i class="bi bi-file-text text-primary me-2"></i>Terms of Service & Demo Disclaimer</h4>
+      <h4 class="fw-bold text-navy mb-3"><i class="fa-solid fa-file-contract text-primary me-2 heading-icon-float"></i>Terms of Service & Regulatory Compliance</h4>
       <p class="text-muted small mb-0">
-        All lender names, logos, interest rate quotes, credit score meters and mock approval notices are for interface presentation and user experience evaluation purposes. FinBridge is not a direct lender; loan approvals, disbursements and interest rates are determined solely by participating RBI-registered financial institutions.
+        SRS Financial Solutions works collaboratively with RBI-regulated scheduled commercial banks and NBFCs. Final sanction, credit limits, interest rates, and loan disbursal are subject to lender credit policies, bureau verification, and underwriting standards.
       </p>
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- Comprehensive Footer -->
   <footer class="fb-footer">
-    <div class="container text-center text-muted small">
-      <p>© 2026 FinBridge Technologies Private Limited. Demo Presentation Mode.</p>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & Overview -->
+        <div class="col-lg-4">
+          <div class="mb-3">
+            <a href="index.html" class="d-inline-block">
+              <img src="assets/images/logo.png" alt="SRS Financial Solutions" class="srs-logo-footer mb-2">
+            </a>
+            <div class="fw-bold text-white fs-5">SRS Financial Solutions</div>
+            <div class="small text-warning fst-italic">"Empowering peoples with Smart Financial Solutions"</div>
+          </div>
+          <p class="small text-white-50 mb-3" style="line-height: 1.6;">
+            SRS Financial Solutions is a trusted financial services firm (Partnership, Founded 2025) dedicated to helping businesses and individuals access the right funding solutions with ease, speed, and complete transparency.
+          </p>
+          <div class="d-flex flex-column gap-2 small text-white-50 mb-3">
+            <div class="d-flex align-items-start gap-2">
+              <i class="fa-solid fa-location-dot text-warning mt-1"></i>
+              <span><strong>HQ:</strong> 1st Floor D90, Avanta Tower, Vibhuti Khand, Gomti Nagar, Lucknow, UP 226010, IN</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-phone text-success"></i>
+              <span>+91 94520 00000 / 1800-123-4567</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-envelope text-info"></i>
+              <span>contact@srsfinancial.in</span>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <a href="https://www.linkedin.com/company/srs-financial-solutions" target="_blank" rel="noopener" class="fb-icon-btn text-white" style="background:#0077b5;" title="SRS Financial Solutions on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919452000000" target="_blank" rel="noopener" class="fb-icon-btn text-white" style="background:#25D366;" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+919452000000" class="fb-icon-btn text-white" style="background:#11355E;" title="Call Helpline"><i class="fa-solid fa-phone"></i></a>
+            <a href="mailto:contact@srsfinancial.in" class="fb-icon-btn text-white" style="background:#C6923B;" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.bing.com/maps?where=1st+Floor+D90%2CAvanta+Tower%2CVibhuti+khand%2CGomti+Nagar+Lucknow+226010+Uttar+Pradesh+IN&trk=org-locations_url" target="_blank" rel="noopener" class="fb-icon-btn text-white" style="background:#008080;" title="Bing Maps Location"><i class="fa-solid fa-map-location-dot"></i></a>
+          </div>
+          <div>
+            <a href="https://www.bing.com/maps?where=1st+Floor+D90%2CAvanta+Tower%2CVibhuti+khand%2CGomti+Nagar+Lucknow+226010+Uttar+Pradesh+IN&trk=org-locations_url" target="_blank" rel="noopener" class="btn btn-sm btn-outline-warning text-nowrap">
+              <i class="fa-solid fa-diamond-turn-right me-1"></i> Get Directions (Bing Maps)
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Specializations -->
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white"><i class="fa-solid fa-briefcase text-warning me-2 heading-icon-pulse"></i>Specializations</h5>
+          <ul class="fb-footer-links">
+            <li><a href="business-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Unsecured Loans</a></li>
+            <li><a href="business-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Working Capital & OD</a></li>
+            <li><a href="business-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Term Loans</a></li>
+            <li><a href="business-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Channel Financing</a></li>
+            <li><a href="business-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Multi-Lender Solutions</a></li>
+            <li><a href="personal-loans.html"><i class="fa-solid fa-circle-check text-success me-1"></i> Personal Loans</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Financial Tools -->
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white"><i class="fa-solid fa-calculator text-info me-2 heading-icon-float"></i>Smart Tools</h5>
+          <ul class="fb-footer-links">
+            <li><a href="bank-statement.html"><i class="fa-solid fa-file-invoice text-warning me-1"></i> Statement Analyzer</a></li>
+            <li><a href="emi-calculator.html"><i class="fa-solid fa-calculator text-warning me-1"></i> EMI Calculator</a></li>
+            <li><a href="sip-calculator.html"><i class="fa-solid fa-chart-line text-warning me-1"></i> SIP Calculator</a></li>
+            <li><a href="fd-calculator.html"><i class="fa-solid fa-piggy-bank text-warning me-1"></i> FD Calculator</a></li>
+            <li><a href="credit-score.html"><i class="fa-solid fa-gauge-high text-warning me-1"></i> Free Credit Score</a></li>
+            <li><a href="calculators.html"><i class="fa-solid fa-toolbox text-warning me-1"></i> All Calculators</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals -->
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white"><i class="fa-solid fa-user-shield text-success me-2 heading-icon-sway"></i>Portals</h5>
+          <ul class="fb-footer-links">
+            <li><a href="dashboard/index.html"><i class="fa-solid fa-user me-1 text-info"></i> Customer Portal</a></li>
+            <li><a href="dashboard/applications.html"><i class="fa-solid fa-clock-rotate-left me-1"></i> Track Applications</a></li>
+            <li><a href="dashboard/documents.html"><i class="fa-solid fa-folder-open me-1"></i> Document Locker</a></li>
+            <li><a href="admin/index.html"><i class="fa-solid fa-gauge me-1 text-warning"></i> Admin Portal</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Login / Register</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Company & Support -->
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white"><i class="fa-solid fa-building text-primary me-2 heading-icon-float"></i>Company</h5>
+          <ul class="fb-footer-links">
+            <li><a href="about.html">About SRS Financial</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blog.html">Financial Guides</a></li>
+            <li><a href="faq.html">Help & FAQs</a></li>
+            <li><a href="about.html#values">Core Values</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Demo Disclaimer Box -->
+      <div class="fb-footer-disclaimer">
+        <strong>Demo Presentation Disclaimer:</strong> SRS Financial Solutions is an interactive frontend demo and technology showcase. Loan amounts, interest rates, credit score estimations, and lender brand logos are illustrative sample records for UI/UX demonstration purposes. No real bank accounts or credit bureaus are accessed.
+      </div>
+
+      <div class="fb-footer-bottom">
+        <div>© 2025-2026 SRS Financial Solutions (Partnership, Founded 2025). Lucknow, Uttar Pradesh. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="https://www.linkedin.com/company/srs-financial-solutions" target="_blank" rel="noopener" class="text-muted"><i class="fa-brands fa-linkedin me-1"></i>LinkedIn</a>
+          <a href="about.html#values" class="text-muted">Transparency</a>
+          <a href="about.html#values" class="text-muted">Speed</a>
+          <a href="about.html#values" class="text-muted">Client-Centric</a>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -130,4 +453,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

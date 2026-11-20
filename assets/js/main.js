@@ -404,7 +404,7 @@ window.openComparisonModal = function() {
 
   comparedProducts.forEach(p => {
     tableHeader += `<th class="text-center">${p.name}</th>`;
-    rowLender += `<td class="text-center fw-semibold text-primary">${p.lender || 'FinBridge Partner'}</td>`;
+    rowLender += `<td class="text-center fw-semibold text-primary">${p.lender || 'SRS Partner Network'}</td>`;
     rowType += `<td class="text-center"><span class="badge bg-light text-dark border">${p.type}</span></td>`;
     rowRate += `<td class="text-center fw-bold text-success">${p.rate}</td>`;
     rowAction += `<td class="text-center">
@@ -443,7 +443,7 @@ function initGlobalModals() {
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content" style="border-radius:16px; overflow:hidden;">
             <div class="modal-header border-bottom px-4 py-3 bg-light">
-              <h5 class="modal-title fw-bold text-navy" id="fbDynamicModalTitle">FinBridge</h5>
+              <h5 class="modal-title fw-bold text-navy" id="fbDynamicModalTitle">SRS Financial Solutions</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4" id="fbDynamicModalBody"></div>
@@ -467,11 +467,11 @@ function showModal(id, options) {
 window.openApplyModal = function(lender, product, amount = 500000) {
   const user = JSON.parse(localStorage.getItem('finbridge_user') || '{}');
   showModal('applyModal', {
-    title: `<i class="bi bi-file-earmark-plus text-success me-2"></i>Apply for ${product}`,
+    title: `<i class="bi bi-file-earmark-plus text-success me-2"></i>Apply with SRS Financial Solutions: ${product}`,
     body: `
       <form id="instantApplyForm" onsubmit="handleApplySubmit(event, '${lender}', '${product}')">
         <div class="alert alert-info py-2 px-3 small border-0 mb-3">
-          <i class="bi bi-info-circle-fill me-1"></i> Instant 100% Paperless Digital Application (Demo)
+          <i class="bi bi-info-circle-fill me-1"></i> Fast Digital Processing with Leading Banks & NBFCs • Lucknow HQ
         </div>
         <div class="row g-3">
           <div class="col-md-6">
@@ -491,23 +491,23 @@ window.openApplyModal = function(lender, product, amount = 500000) {
             <input type="number" class="fb-form-control" id="appAmount" value="${amount}" min="10000" required>
           </div>
           <div class="col-md-6">
-            <label class="fb-form-label">Employment Status</label>
+            <label class="fb-form-label">Employment / Business Type</label>
             <select class="fb-form-select" id="appEmp">
-              <option selected>Salaried (Private Ltd / MNC)</option>
-              <option>Salaried (Government / PSU)</option>
+              <option selected>Business Owner / Entrepreneur</option>
+              <option>Working Capital & OD Applicant</option>
+              <option>Salaried (Private Ltd / MNC)</option>
               <option>Self-Employed Professional</option>
-              <option>Business Owner / Entrepreneur</option>
             </select>
           </div>
           <div class="col-md-6">
-            <label class="fb-form-label">Current City</label>
-            <input type="text" class="fb-form-control" id="appCity" value="New Delhi" required>
+            <label class="fb-form-label">City</label>
+            <input type="text" class="fb-form-control" id="appCity" value="Lucknow" required>
           </div>
         </div>
         <div class="form-check mt-3">
           <input class="form-check-input" type="checkbox" id="appConsent" checked required>
           <label class="form-check-label small text-muted" for="appConsent">
-            I agree to FinBridge Terms & Privacy Policy and authorize soft pre-qualification check.
+            I authorize SRS Financial Solutions to explore best loan offers through partner banks & NBFCs.
           </label>
         </div>
         <div class="mt-4 d-flex justify-content-end gap-2">
@@ -521,7 +521,7 @@ window.openApplyModal = function(lender, product, amount = 500000) {
 
 window.handleApplySubmit = function(e, lender, product) {
   e.preventDefault();
-  const appId = 'FB-' + Math.floor(100000 + Math.random() * 900000);
+  const appId = 'SRS-' + Math.floor(100000 + Math.random() * 900000);
   const name = document.getElementById('appFullName').value;
   const phone = document.getElementById('appPhone').value;
   const email = document.getElementById('appEmail').value;
@@ -548,17 +548,17 @@ window.handleApplySubmit = function(e, lender, product) {
   const bsModal = bootstrap.Modal.getInstance(modalEl);
   if (bsModal) bsModal.hide();
 
-  showToast(`Application #${appId} submitted successfully!`, 'success');
+  showToast(`Application #${appId} submitted to SRS Financial Solutions!`, 'success');
 
   setTimeout(() => {
     showModal('appSuccessModal', {
-      title: '<i class="bi bi-check-circle-fill text-success me-2"></i>Application Successful',
+      title: '<i class="bi bi-check-circle-fill text-success me-2"></i>Application Received Successfully',
       body: `
         <div class="text-center py-3">
           <div class="display-6 text-success mb-2"><i class="bi bi-shield-fill-check"></i></div>
           <h4 class="fw-bold">Your Application ID is ${appId}</h4>
-          <p class="text-muted">Lender: <strong>${lender}</strong> | Product: <strong>${product}</strong></p>
-          <p class="small text-muted mb-4">Our lending specialist will reach out within 2 business hours for digital verification.</p>
+          <p class="text-muted">Partner Lender: <strong>${lender}</strong> | Solution: <strong>${product}</strong></p>
+          <p class="small text-muted mb-4">Our financial consultant at Avanta Tower, Gomti Nagar, Lucknow will contact you within 2 business hours.</p>
           <div class="d-flex justify-content-center gap-2">
             <a href="dashboard/applications.html" class="fb-btn-primary">Track in Dashboard</a>
             <button class="btn btn-light" data-bs-dismiss="modal">Close</button>
@@ -577,31 +577,35 @@ function initSearch() {
   if (searchBtn) {
     searchBtn.addEventListener('click', () => {
       showModal('searchModal', {
-        title: '<i class="bi bi-search me-2"></i>Search FinBridge Marketplace',
+        title: '<i class="bi bi-search me-2"></i>Search SRS Financial Solutions',
         body: `
           <div class="input-group mb-3">
             <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
-            <input type="text" class="form-control border-start-0 ps-0" id="globalSearchInput" placeholder="Search loans, credit cards, calculators, articles..." autofocus onkeyup="filterSearchResults(this.value)">
+            <input type="text" class="form-control border-start-0 ps-0" id="globalSearchInput" placeholder="Search business loans, working capital, OD limits, tools..." autofocus onkeyup="filterSearchResults(this.value)">
           </div>
           <div id="searchResultsList" class="list-group list-group-flush small">
+            <a href="business-loans.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
+              <span><i class="bi bi-briefcase text-primary me-2"></i>Unsecured Business Loans & OD Limits</span>
+              <span class="badge bg-light text-muted">Business</span>
+            </a>
             <a href="personal-loans.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
               <span><i class="bi bi-cash-stack text-success me-2"></i>Personal Loans (from 10.49% p.a.)</span>
               <span class="badge bg-light text-muted">Loans</span>
             </a>
             <a href="credit-cards.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
-              <span><i class="bi bi-credit-card-2-front text-primary me-2"></i>Lifetime Free Credit Cards</span>
+              <span><i class="bi bi-credit-card-2-front text-primary me-2"></i>Business & Rewards Credit Cards</span>
               <span class="badge bg-light text-muted">Cards</span>
             </a>
             <a href="bank-statement.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
-              <span><i class="bi bi-file-earmark-spreadsheet text-info me-2"></i>Bank Statement Analyzer</span>
+              <span><i class="bi bi-file-earmark-spreadsheet text-info me-2"></i>Bank Statement Analyzer (Local Privacy)</span>
               <span class="badge bg-light text-muted">Tools</span>
             </a>
             <a href="emi-calculator.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
-              <span><i class="bi bi-calculator text-warning me-2"></i>Loan EMI Calculator</span>
+              <span><i class="bi bi-calculator text-warning me-2"></i>Loan EMI & Working Capital Calculator</span>
               <span class="badge bg-light text-muted">Calculators</span>
             </a>
             <a href="credit-score.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
-              <span><i class="bi bi-speedometer2 text-danger me-2"></i>Free Credit Health Check</span>
+              <span><i class="bi bi-speedometer2 text-danger me-2"></i>Free Credit Health Assessment</span>
               <span class="badge bg-light text-muted">Credit</span>
             </a>
           </div>

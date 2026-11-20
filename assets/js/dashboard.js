@@ -24,10 +24,10 @@ function ensureDefaultCustomerData() {
       phone: '+91 98765 43210',
       pan: 'ABCPS1234F',
       cibil: 785,
-      city: 'New Delhi',
-      employment: 'Salaried',
-      company: 'Infosys Limited',
-      income: 120000
+      city: 'Lucknow',
+      employment: 'Business Owner',
+      company: 'SRS Retail Solutions',
+      income: 150000
     };
     localStorage.setItem('finbridge_user', JSON.stringify(defaultUser));
   }
@@ -35,29 +35,29 @@ function ensureDefaultCustomerData() {
   if (!localStorage.getItem('finbridge_applications')) {
     const defaultApps = [
       {
-        id: 'FB-982142',
+        id: 'SRS-982142',
         applicant: 'Aditya Sharma',
-        lender: 'FinTrust Bank',
-        product: 'Personal Loan',
-        amount: 500000,
+        lender: 'HDFC Bank',
+        product: 'Unsecured Business Loan',
+        amount: 1500000,
         status: 'Approved',
         submittedAt: '02 Mar 2026'
       },
       {
-        id: 'FB-774109',
+        id: 'SRS-774109',
         applicant: 'Aditya Sharma',
-        lender: 'HDFC Bank',
-        product: 'Millennia Credit Card',
-        amount: 150000,
+        lender: 'Bajaj Finserv',
+        product: 'Working Capital & OD Limit',
+        amount: 2500000,
         status: 'Under Review',
         submittedAt: '15 Feb 2026'
       },
       {
-        id: 'FB-651238',
+        id: 'SRS-651238',
         applicant: 'Aditya Sharma',
-        lender: 'Unity Finance',
-        product: 'Instant Cash Loan',
-        amount: 100000,
+        lender: 'Tata Capital',
+        product: 'Term Loan',
+        amount: 1000000,
         status: 'Disbursed',
         submittedAt: '10 Jan 2026'
       }

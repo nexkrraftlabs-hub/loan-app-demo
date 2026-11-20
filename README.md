@@ -1,86 +1,98 @@
-# FinBridge — Premium Indian FinTech Marketplace & Personal Finance Platform
+# SRS Financial Solutions — Premium Financial Marketplace & Business Lending Platform
 
-FinBridge is an enterprise-grade, multi-page Indian financial marketplace and personal finance intelligence dashboard. It delivers an experience inspired by leading platforms such as Paisabazaar, designed with an original brand identity, modern UX, privacy-first client-side data parsing, and zero server lock-in.
+> **"Empowering peoples with Smart Financial Solutions"**
+
+SRS Financial Solutions is a trusted financial services firm dedicated to helping businesses, SMEs, and individuals access the right funding solutions with ease, speed, and efficiency. 
+
+Headquartered in **Lucknow, Uttar Pradesh**, SRS Financial Solutions operates with an extensive consortium network of leading private banks, public sector banks, and top-tier NBFCs to ensure fast processing, competitive interest rates, and maximum approval chances for clients.
 
 ---
 
-## 🌟 Key Features
+## 🏢 Corporate Profile
 
-### 1. Consumer Financial Marketplace
-- **Personal Loans Marketplace:** Real-time filterable lending catalog with APRs from 10.49% p.a., loan amount sliders, estimated monthly EMIs, and multi-lender comparison.
-- **Business & MSME Loans:** Working capital financing, machinery capex loans, and GST-based fast-track sanctions.
-- **Credit Cards Catalog:** Filter by Cashback, Rewards, Travel, Lifetime Free, and RuPay UPI cards with feature comparisons and fee waivers.
-- **Credit Health & Bureau Simulator:** Interactive circular credit score gauge, breakdown of 5 core credit health factors (payment history, credit utilization, credit age, active lines, inquiries) with zero credit bureau penalty.
-- **Insurance Marketplace:** Cashless health insurance, term life insurance with 99.3% claim settlement ratios, and premium calculator.
-- **Investments & Wealth Hub:** Top-rated direct mutual fund SIPs, DICGC-insured fixed deposits up to 9.00% p.a., and Sovereign Gold avenues.
+- **Company Name:** SRS Financial Solutions
+- **Tagline:** *"Empowering peoples with Smart Financial Solutions"*
+- **Industry:** Financial Services
+- **Entity Type:** Partnership Firm
+- **Founded:** 2025
+- **Company Size:** 2–10 Financial Specialists (71+ Community Followers on LinkedIn)
+- **Primary Headquarters:** 1st Floor D90, Avanta Tower, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010, IN
+- **Bing Maps Directions:** [Open in Bing Maps](https://www.bing.com/maps?where=1st+Floor+D90%2CAvanta+Tower%2CVibhuti+khand%2CGomti+Nagar+Lucknow+226010+Uttar+Pradesh+IN&trk=org-locations_url)
+- **LinkedIn Profile:** [SRS Financial Solutions on LinkedIn](https://www.linkedin.com/company/srs-financial-solutions)
+- **Direct Helpline:** +91 94520 00000 / 1800-123-4567
+- **Email:** contact@srsfinancial.in / support@srsfinancial.in
+- **GitHub Repository:** [nexkrraftlabs-hub/loan-app-demo](https://github.com/nexkrraftlabs-hub/loan-app-demo.git)
 
-### 2. Standout Feature: 100% Client-Side Bank Statement Analyzer
-- **Privacy-First Local Processing:** Bank statements (PDF, CSV, Excel) are parsed strictly within the browser memory sandbox using PapaParse, SheetJS, and PDF.js. No financial records are ever sent to remote servers.
-- **3-Month Realistic Demo Dataset:** Single-click "Try With Sample Bank Statement" loads 65+ authentic Indian banking transactions across 3 consecutive months (Salary credits from Infosys, D-Mart, Swiggy, Zomato, HDFC Home Loan EMI, Bajaj Finance EMI, Netflix, Spotify, utilities).
-- **Automated Analytics:**
-  - KPI Cards: Total Money In, Total Money Out, Net Savings, Savings Rate %, and Transaction Count.
-  - Interactive Chart.js Visualizations: Monthly Inflow vs Outflow Cash Flow Bar Chart & 20+ Category Expense Donut Chart.
-  - Recurring Payment Detection: Automatic pattern recognition for monthly OTT/software subscriptions and recurring Loan EMIs.
-  - Financial Health Summary: Emergency fund recommendations and EMI-to-income debt burden ratios.
-  - Filterable & Searchable Table: Instant narration search, category filter, debit/credit filter, and pagination.
-  - One-Click Exports: Real downloadable CSV export and print-ready PDF statement summary.
+---
 
-### 3. Financial Calculators Engine
-- **Loan EMI Calculator:** Dynamic slider controls for Principal, Annual Rate, and Tenure. Computes monthly EMI, total interest, principal-to-interest donut chart, and complete year-by-year amortization schedule.
-- **SIP Wealth Calculator:** Forecasts compounding growth on monthly mutual fund investments.
-- **Fixed Deposit (FD) Calculator:** Calculates quarterly compounding returns and maturity values.
-- **GST Tax Calculator:** Computes 5%, 12%, 18%, and 28% tax slabs for both GST-inclusive and GST-exclusive transactions.
-- **Loan Eligibility Calculator:** FOIR-based borrowing capacity estimator based on net income and existing obligations.
+## 🎯 Core Specializations
 
-### 4. Customer Portal (`dashboard/`)
-- **Dashboard Overview:** Active application status badges, credit health score, monthly net savings, and bookmarked products.
-- **Application Tracking:** Interactive timeline stepper (Submitted → Verified → Sanctioned → Disbursed) with unique tracking IDs (e.g. `#FB-982142`).
-- **Secure Document Locker:** Encrypted digital locker for Aadhaar, PAN, salary slips, and statement records.
-- **Profile Management:** Update personal demographic and contact details persisted in `localStorage`.
-- **Notifications Hub:** Real-time notifications for application approvals, credit refreshes, and lender offers.
+1. **Unsecured Business Loans:** High-value collateral-free business financing up to ₹75 Lakhs with minimal documentation and fast digital underwriting.
+2. **Working Capital & OD Limits:** Flexible Cash Credit (CC) and Overdraft (OD) facilities where interest is charged only on utilized capital.
+3. **Term Loans:** Medium and long-term financing extending up to 84 months for plant setup, machinery import, and CapEx.
+4. **Channel Financing:** Invoice discounting and credit lines for dealers, distributors, and supply-chain vendors.
+5. **Customized Loan Solutions through Multiple Lenders:** Tailored syndication leveraging our consortium of scheduled commercial banks and NBFCs to ensure the highest approval rate and optimal repayment terms.
 
-### 5. Admin Console (`admin/`)
-- **Executive Overview:** Real-time KPI counters for active leads, submitted applications, published loans, and cards.
-- **Live JavaScript CRUD:**
-  - Loan Products CRUD: Add new loan, edit rates/limits/tenures, delete, and toggle status.
-  - Credit Cards CRUD: Manage card catalogs, reward multipliers, and annual fees.
-  - Application Workflow: Review applicant details and update status (`Under Review`, `Approved`, `Disbursed`, `Rejected`) which immediately updates in the Customer Portal!
-  - Lead Management: Filter and assign executive specialists to high-intent inquiries.
-  - Analytics & Funnel: Conversion metrics, product demand distribution charts, and lender rankings.
-  - Statement Processing Logs: Anonymized audit logs respecting zero-retention privacy rules.
+---
+
+## 🔹 Our Core Values
+
+- **Transparency:** No hidden charges, zero surprises, and crystal-clear fee structures.
+- **Speed:** Quick digital pre-qualification and accelerated institutional disbursals.
+- **Client-Centric Approach:** Dedicated financial specialists committed to long-term enterprise growth.
+
+---
+
+## 🌟 Key Application Features
+
+### 1. Consumer & Enterprise Financial Marketplace
+- **Business Loans Hub (`business-loans.html`):** MSME loans, working capital facilities, and equipment term financing.
+- **Personal Loans Marketplace (`personal-loans.html`):** Real-time lending catalog starting at 10.49% p.a.
+- **Credit Cards Catalog (`credit-cards.html`):** Cashback, Rewards, Travel, Lifetime Free, and RuPay cards.
+- **Credit Health & Bureau Simulator (`credit-score.html`):** Soft credit check simulator with zero bureau score impact.
+- **Insurance Marketplace (`insurance.html`):** Health and term life insurance plans.
+- **Investments & Wealth (`investments.html`):** Mutual fund SIPs, DICGC-insured FDs, and digital gold.
+
+### 2. Standout Feature: 100% Client-Side Bank Statement Analyzer (`bank-statement.html`)
+- **Privacy-First Local Processing:** Bank statements (PDF, CSV, Excel) are parsed strictly within the browser memory sandbox using PapaParse and SheetJS.
+- **Sample Indian Banking Dataset:** One-click sample statement with 65+ transactions across 3 consecutive months.
+- **Automated Analytics:** Monthly cash flow charts, expense categorization donut chart, recurring EMI/subscription detection, and downloadable PDF/CSV reports.
+
+### 3. Financial Calculators Engine (`calculators.html`)
+- **Loan EMI Calculator (`emi-calculator.html`):** Real-time slider controls and year-by-year amortization table.
+- **SIP Wealth Calculator (`sip-calculator.html`):** Compounding returns forecast on monthly mutual fund investments.
+- **FD Maturity Calculator (`fd-calculator.html`):** Compounding interest computation on term deposits.
+
+### 4. Portals & Workflows
+- **Customer Portal (`dashboard/index.html`):** Application timeline stepper (`SRS-` tracking IDs), document locker, and profile management.
+- **Admin Management Console (`admin/index.html`):** Full CRUD for loan products, application reviews, lead assignment, and conversion analytics.
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **Markup & Layout:** HTML5, CSS3, Bootstrap 5.3.3
-- **Icons:** Bootstrap Icons 1.11.3
-- **Typography:** Google Fonts (`Manrope` for headings, `Inter` for body)
-- **Data Visualizations:** Chart.js 4.4.4
-- **CSV Engine:** PapaParse 5.4.1
-- **Spreadsheet Engine:** SheetJS (xlsx 0.18.5)
-- **Client Storage:** Browser `localStorage` for non-sensitive demo state persistence
+- **Official Brand Assets:** Transparent high-res PNG logo & multi-size favicons (`assets/images/logo.png`, `favicon.png`, `favicon.ico`)
+- **Animations:** CSS keyframe animations for moving heading icons (`.heading-icon-float`, `.heading-icon-pulse`, `.heading-icon-sway`)
+- **Icons:** Font Awesome 6 (`fa-solid`, `fa-brands`) + Bootstrap Icons 1.11.3
+- **CSS Framework:** Bootstrap 5.3.3 + Custom CSS variables (`--srs-navy`, `--srs-gold`)
+- **Visualizations:** Chart.js 4.4.4
 
 ---
 
-## 🚀 How to Run & Demo
+## 🚀 How to Run Locally
 
-1. Open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, Safari).
-2. Or use a simple local HTTP server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   ```
-   Then navigate to `http://localhost:8000/`.
+```bash
+# Clone the repository
+git clone https://github.com/nexkrraftlabs-hub/loan-app-demo.git
+cd loan-app-demo
 
-### Quick Demo Credentials:
-- **Customer Portal:** Click **Login** on the navbar and select **"Customer"** to log in as *Aditya Sharma*.
-- **Admin Console:** Click **Login** on the navbar and select **"Admin Portal"** to log in as *System Administrator*.
-- **Bank Statement Analyzer:** Navigate to **Statement Analyzer** and click **"Try With Sample Bank Statement"** to immediately load the 65+ transaction dataset and view the dynamic charts!
+# Start a local web server
+python -m http.server 8000
+```
+Open `http://localhost:8000/` in your browser.
 
 ---
 
 ## 📄 License & Disclaimer
 
-FinBridge is built as a realistic fintech product design demonstration. All lender names, brand identities, interest rate quotes, and credit score metrics are illustrative sample records for UI/UX demonstration purposes. Bank statement analysis occurs strictly inside the user's browser sandbox.
-
+SRS Financial Solutions is an interactive fintech platform demonstration. Loan amounts, interest rates, credit score estimations, and lender brand logos are illustrative sample records for UI/UX demonstration purposes.
